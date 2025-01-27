@@ -1,0 +1,203 @@
+{
+  "basics": {
+    "name": "Nirina Ramamonjisoa",
+    "label": "Développeur Web | UI/UX Designer en transition",
+    "image": "/me_avatar.jpg",
+    "email": "nirina.ramamonjisoa@gmail.com",
+    "phone": "+33 6 29 61 01 26",
+    "url": "",
+    "summary": "Développeur web en transition, je mobilise mes compétences en UX/UI et en développement pour concevoir des expériences digitales optimisées. Fort de capacités d'écoute et d'organisation, je recherche des opportunités alliant technique, créativité et impact positif.",
+    "theme": "blue",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Bordeaux",
+      "countryCode": "FR",
+      "region": "France"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "nirina-ramamonjisoa",
+        "url": "https://linkedin.com/in/nirina-ramamonjisoa"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Freelance",
+      "position": "Développeur Web / Webmaster",
+      "location_type": "Remote",
+      "location": "Paris, France",
+      "startDate": "2023-01-01",
+      "endDate": "2024-01-01",
+      "summary": "Création et optimisation de sites web en tant que freelance, avec une expertise en UX/UI et développement web.",
+      "highlights": [
+        "Analyse des besoins et proposition de solutions adaptées",
+        "Conception et développement de sites web sur mesure",
+        "Utilisation de Figma pour le design UI/UX",
+        "Développement avec WordPress, Symfony, Twig, Docker et Git"
+      ],
+      "skills": [
+        "Figma",
+        "WordPress",
+        "Symfony",
+        "Twig",
+        "Docker",
+        "Git"
+      ]
+    },
+    {
+      "name": "Phone Régie (EY)",
+      "position": "Standardiste / Centre Services",
+      "location_type": "On site",
+      "location": "Paris, France",
+      "startDate": "2015-01-01",
+      "endDate": "2022-01-01",
+      "summary": "Gestion des appels et des services internes d'un grand groupe, avec un rôle clé dans l’optimisation des processus et la formation des collaborateurs.",
+      "highlights": [
+        "Réception et orientation des appels et demandes internes",
+        "Formation des nouveaux employés à l'utilisation des outils du standard",
+        "Participation aux phases de recette après mises en production des nouveaux outils",
+        "Gestion de la boîte mail partagée et mise à jour des informations internes"
+      ],
+      "skills": [
+        "Word",
+        "Excel",
+        "Outlook"
+      ]
+    },
+    {
+      "name": "Freelance",
+      "position": "Développeur Web / Webmaster",
+      "location_type": "Remote",
+      "location": "Paris, France",
+      "startDate": "2013-01-01",
+      "endDate": "2014-01-01",
+      "summary": "Développement de sites web en freelance avec un focus sur la conception graphique et l'ergonomie utilisateur.",
+      "highlights": [
+        "Analyse des besoins clients et élaboration de solutions techniques",
+        "Design UX/UI et intégration web",
+        "Développement et maintenance de sites WordPress"
+      ],
+      "skills": [
+        "WordPress",
+        "UX/UI Design",
+        "PHP",
+        "CSS",
+        "MySQL"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Comité de Construction Régional",
+      "position": "Bénévole",
+      "url": "",
+      "startDate": "2007-01-01",
+      "endDate": "2012-01-01",
+      "summary": "Gestion et maintenance du parc informatique"
+    }
+  ],
+  "education": [
+    {
+      "institution": "IUT de Champs-sur-Marne",
+      "area": "Service et Technique de l'Information et de la Communication",
+      "studyType": "Licence",
+      "startDate": "2006-01-01",
+      "endDate": "2007-12-31"
+    },
+    {
+      "institution": "Lycée Polyvalent Louis Armand",
+      "area": "Informatique de Gestion",
+      "studyType": "Brevet de Technicien Supérieur (BTS)",
+      "startDate": "2002-01-01",
+      "endDate": "2004-12-31"
+    },
+    {
+      "institution": "Lycée Polyvalent Christophe Colomb",
+      "area": "Sciences Économiques et Sociales",
+      "studyType": "Baccalauréat",
+      "startDate": "2002-01-01",
+      "endDate": "2002-12-31"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "",
+      "date": "",
+      "issuer": "",
+      "url": ""
+    }
+  ],
+  "skills": [
+    {
+      "name": "Figma",
+      "level": "Intermédiaire"
+    },
+    {
+      "name": "WordPress",
+      "level": "Intermédiaire"
+    },
+    {
+      "name": "Symfony",
+      "level": "Intermédiaire"
+    },
+    {
+      "name": "Twig",
+      "level": "Intermédiaire"
+    },
+    {
+      "name": "Docker",
+      "level": "Intermédiaire"
+    },
+    {
+      "name": "Git",
+      "level": "Intermédiaire"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Français",
+      "fluency": "Langue maternelle"
+    },
+    {
+      "language": "Anglais",
+      "fluency": "Courant"
+    },
+    {
+      "language": "Malgache",
+      "fluency": "Courant"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Sports",
+      "keywords": ["Basket"]
+    },
+    {
+      "name": "Cuisine"
+    },
+    {
+      "name": "Culture Asiatique"
+    }
+  ],
+  "references": [
+    {
+      "name": "",
+      "reference": ""
+    }
+  ],
+  "projects": [
+    {
+      "name": "Portfolio personel",
+      "isActive": true,
+      "description": "Un portefolio personnel pour montrer mes compétences et projets",
+      "highlights": [
+        "Built with Astro.build"
+      ],
+      "url": "",
+      "github": "https://github.com"
+    }
+  ]
+}
