@@ -30,7 +30,7 @@
       "location_type": "Remote",
       "location": "Paris, France",
       "startDate": "2023-01-01",
-      "endDate": "2024-01-01",
+      "endDate": "2025-01-01",
       "summary": "Création et optimisation de sites web en tant que freelance, avec une expertise en UX/UI et développement web.",
       "highlights": [
         "Analyse des besoins et proposition de solutions adaptées",
@@ -51,7 +51,7 @@
       "responsibilities": [""]
     },
     {
-      "name": "Phone Régie (EY)",
+      "name": "EY",
       "position": "Standardiste / Centre Services",
       "location_type": "On site",
       "location": "Paris, France",
@@ -67,9 +67,11 @@
       "skills": [
         "Word",
         "Excel",
-        "Outlook"
+        "Outlook",
+        "Teams",
+        "Skype"
       ],
-      "url": "",
+      "url": "https://www.ey.com",
       "achievements": ["Amélioration des méthodes et outils de formations"],
       "responsibilities": [""]
     },
