@@ -1,17 +1,17 @@
 {
   "basics": {
     "name": "Nirina Ramamonjisoa",
-    "label": "Développeur Web | UI/UX Designer en transition",
+    "label": "Développeur Web & Support IT | Expérience Polyvalente",
     "image": "me_avatar.jpg",
     "email": "nirina.ramamonjisoa@gmail.com",
     "phone": "+33 6 29 61 01 26",
     "url": "",
-    "summary": "Développeur web en transition, je mobilise mes compétences en UX/UI et en développement pour concevoir des expériences digitales optimisées. Fort de capacités d'écoute et d'organisation, je recherche des opportunités alliant technique, créativité et impact positif.",
+    "summary": "Passionné par la tech et l’expérience utilisateur, j’allie mes compétences en développement web (WordPress, Symfony, UX/UI) et en support IT pour apporter des solutions fiables et optimisées. Mon expérience en entreprise et en freelance m’a appris à travailler avec rigueur et réactivité.",
     "theme": "blue",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "Bordeaux",
+      "city": "Remote only",
       "countryCode": "FR",
       "region": "France"
     },
@@ -26,7 +26,7 @@
   "work": [
     {
       "name": "Freelance",
-      "position": "Développeur Web / Webmaster",
+      "position": "Développeur Web / Webdesigner",
       "location_type": "Remote",
       "location": "Paris, France",
       "startDate": "2023-01-01",
@@ -52,7 +52,7 @@
     },
     {
       "name": "EY",
-      "position": "Standardiste / Centre Services",
+      "position": "Standardiste & Support Collaborateur",
       "location_type": "On site",
       "location": "Paris, France",
       "startDate": "2015-01-01",
@@ -60,9 +60,10 @@
       "summary": "Gestion des appels et des services internes d'un grand groupe, avec un rôle clé dans l’optimisation des processus et la formation des collaborateurs.",
       "highlights": [
         "Réception et orientation des appels et demandes internes",
-        "Formation des nouveaux employés à l'utilisation des outils du standard",
-        "Participation aux phases de recette après mises en production des nouveaux outils",
-        "Gestion de la boîte mail partagée et mise à jour des informations internes"
+        "Formation des nouveaux collaborateurs à l'utilisation des outils du standard",
+        "Gestion de la boîte mail partagée et mise à jour des informations internes",
+        "Participation à la migration du standard vers Attendant Pro et accompagnement technique du projet",
+        "Contribution à la transition vers un standard 100 % télétravail"
       ],
       "skills": [
         "Word",
@@ -77,7 +78,7 @@
     },
     {
       "name": "Freelance",
-      "position": "Développeur Web / Webmaster",
+      "position": "Développeur Web / Webdesigner",
       "location_type": "Remote",
       "location": "Paris, France",
       "startDate": "2013-01-01",
@@ -105,7 +106,7 @@
       "organization": "Comité de Construction Régional",
       "position": "Bénévole",
       "url": "",
-      "startDate": "2007-01-01",
+      "startDate": "2008-01-01",
       "endDate": "2012-01-01",
       "summary": "Gestion et maintenance du parc informatique"
     }
@@ -190,10 +191,10 @@
       "keywords": ["Basket"]
     },
     {
-      "name": "Cuisine"
+      "name": "Ramen"
     },
     {
-      "name": "Culture Asiatique"
+      "name": "Histoire"
     }
   ],
   "references": [
