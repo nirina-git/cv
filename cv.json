@@ -2,18 +2,18 @@
   "basics": {
     "name": "Nirina Ramamonjisoa",
     "label": "Développeur Web & Support IT | Expérience Polyvalente",
-    "image": "me_avatar.jpg",
+    "image": "https://api.dicebear.com/9.x/notionists/svg?seed=Nirina&backgroundColor=b6e3f4",
     "email": "nirina.ramamonjisoa@gmail.com",
     "phone": "+33 6 29 61 01 26",
     "url": "",
-    "summary": "Passionné par la tech et l’expérience utilisateur, j’allie mes compétences en développement web (WordPress, Symfony, UX/UI) et en support IT pour apporter des solutions fiables et optimisées. Mon expérience en entreprise et en freelance m’a appris à travailler avec rigueur et réactivité.",
+    "summary": "Développeur web freelance spécialisé en Symfony, WordPress et design UX/UI. Fort de 10 ans d’expérience entre développement sur mesure et environnement IT d’entreprise (EY), j’interviens en remote sur des projets orientés performance et expérience utilisateur.",
     "theme": "blue",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "Remote only",
-      "countryCode": "FR",
-      "region": "France"
+      "city": "À distance",
+      "countryCode": "",
+      "region": ""
     },
     "profiles": [
       {
@@ -26,79 +26,151 @@
   "work": [
     {
       "name": "Freelance",
-      "position": "Développeur Web / Webdesigner",
-      "location_type": "Remote",
-      "location": "Paris, France",
+      "position": "Webdesigner & Développeur Web",
+      "location_type": "À distance",
+      "location": "France",
       "startDate": "2023-01-01",
-      "endDate": "2025-01-01",
-      "summary": "Création et optimisation de sites web en tant que freelance, avec une expertise en UX/UI et développement web.",
-      "highlights": [
-        "Analyse des besoins et proposition de solutions adaptées",
-        "Conception et développement de sites web sur mesure",
-        "Utilisation de Figma pour le design UI/UX",
-        "Développement avec WordPress, Symfony, Twig, Docker et Git"
-      ],
-      "skills": [
-        "Figma",
-        "WordPress",
-        "Symfony",
-        "Twig",
-        "Docker",
-        "Git"
-      ],
+      "endDate": null,
+      "summary": "Création et développement de sites web sur mesure pour des clients variés, en télétravail.",
+      "highlights": [],
+      "skills": ["HTML", "CSS", "WordPress", "Symfony", "Twig", "Docker", "Git", "Figma"],
       "url": "",
-      "achievements": ["Changement de technologie et migration"],
-      "responsibilities": [""]
+      "achievements": [],
+      "responsibilities": [
+        "Création et développement de sites web en WordPress, Symfony, HTML, CSS, JS.",
+        "Gestion de l’hébergement, du déploiement et du versioning avec Docker et Git.",
+        "Conception UX/UI et intégration graphique."
+      ]
     },
     {
       "name": "EY",
-      "position": "Standardiste & Support Collaborateur",
-      "location_type": "On site",
-      "location": "Paris, France",
+      "position": "Standardiste & Centre Services",
+      "location_type": "Hybride",
+      "location": "Courbevoie, Île-de-France, France",
       "startDate": "2015-01-01",
       "endDate": "2022-01-01",
-      "summary": "Gestion des appels et des services internes d'un grand groupe, avec un rôle clé dans l’optimisation des processus et la formation des collaborateurs.",
-      "highlights": [
-        "Réception et orientation des appels et demandes internes",
-        "Formation des nouveaux collaborateurs à l'utilisation des outils du standard",
-        "Gestion de la boîte mail partagée et mise à jour des informations internes",
-        "Participation à la migration du standard vers Attendant Pro et accompagnement technique du projet",
-        "Contribution à la transition vers un standard 100 % télétravail"
-      ],
-      "skills": [
-        "Word",
-        "Excel",
-        "Outlook",
-        "Teams",
-        "Skype"
-      ],
+      "summary": "Gestion du standard téléphonique de haut niveau d’EY France (via Phone Régie), avec un rôle clé dans la formation et la transition vers le télétravail.",
+      "highlights": [],
+      "skills": ["Word", "Excel", "Outlook", "Teams", "Skype"],
       "url": "https://www.ey.com",
-      "achievements": ["Amélioration des méthodes et outils de formations"],
-      "responsibilities": [""]
+      "achievements": [
+        "Participation à la migration du standard vers Attendant Pro.",
+        "Contribution à la transition vers un standard 100 % télétravail."
+      ],
+      "responsibilities": [
+        "Gestion d’un standard téléphonique de haut niveau (EY France).",
+        "Maîtrise des outils de gestion des appels et de la relation client.",
+        "Formation des nouveaux standardistes et gestion d’équipe (suppléance du responsable)."
+      ]
     },
     {
       "name": "Freelance",
-      "position": "Développeur Web / Webdesigner",
-      "location_type": "Remote",
-      "location": "Paris, France",
+      "position": "Webdesigner",
+      "location_type": "À distance",
+      "location": "France",
       "startDate": "2013-01-01",
-      "endDate": "2014-01-01",
-      "summary": "Développement de sites web en freelance avec un focus sur la conception graphique et l'ergonomie utilisateur.",
-      "highlights": [
-        "Analyse des besoins clients et élaboration de solutions techniques",
-        "Design UX/UI et intégration web",
-        "Développement et maintenance de sites WordPress"
-      ],
-      "skills": [
-        "WordPress",
-        "UX/UI Design",
-        "PHP",
-        "CSS",
-        "MySQL"
-      ],
+      "endDate": "2015-01-01",
+      "summary": "Conception de sites web pour artisans et e-commerce en Martinique.",
+      "highlights": [],
+      "skills": ["WordPress", "PHP", "HTML", "CSS", "MySQL"],
       "url": "",
-      "achievements": ["Création"],
-      "responsibilities": [""]
+      "achievements": [],
+      "responsibilities": [
+        "Conception de sites web pour artisans et e-commerce en Martinique.",
+        "Création d’éléments graphiques (bannières, logos, icônes).",
+        "Travail sur HTML, CSS et premiers pas en JavaScript."
+      ]
+    },
+    {
+      "name": "Collège Paul Eluard",
+      "position": "Assistant d’éducation",
+      "location_type": "Sur site",
+      "location": "Bonneuil-sur-Marne, Île-de-France, France",
+      "startDate": "2009-01-01",
+      "endDate": "2011-01-01",
+      "summary": "Surveillance et encadrement des élèves, aide aux devoirs et gestion des relations avec les familles.",
+      "highlights": [],
+      "skills": [],
+      "url": "",
+      "achievements": [],
+      "responsibilities": [
+        "Surveillance et encadrement des élèves.",
+        "Aide aux devoirs et suivi pédagogique.",
+        "Gestion des relations avec les parents et résolution de conflits."
+      ]
+    },
+    {
+      "name": "Comité de Construction Régional",
+      "position": "Technicien informatique",
+      "location_type": "Hybrid",
+      "location": "France",
+      "startDate": "2008-01-01",
+      "endDate": "2012-01-01",
+      "summary": "Maintenance et administration du parc informatique, support utilisateur sur site et à distance.",
+      "highlights": [],
+      "skills": [],
+      "url": "",
+      "achievements": [],
+      "responsibilities": [
+        "Maintenance et administration des postes de travail (mises à jour, sauvegarde, sécurité).",
+        "Installation et gestion des réseaux informatiques temporaires sur les chantiers.",
+        "Support utilisateur sur site et à distance (hotline et dépannage)."
+      ]
+    },
+    {
+      "name": "Netvibes",
+      "position": "Webdesigner Junior",
+      "location_type": "Sur site",
+      "location": "Paris, Île-de-France, France",
+      "startDate": "2006-01-01",
+      "endDate": "2008-01-01",
+      "summary": "Participation au développement des Univers Netvibes et création d’éléments graphiques au sein d’une équipe de développeurs.",
+      "highlights": [],
+      "skills": ["HTML", "CSS"],
+      "url": "",
+      "achievements": [],
+      "responsibilities": [
+        "Participation au développement des Univers Netvibes (mini-sites personnalisés à base de widgets).",
+        "Création d’éléments graphiques (bannières, icônes) et intégration HTML/CSS.",
+        "Collaboration avec une équipe de développeurs sur un projet à grande échelle.",
+        "Expérience avec Subversion (gestion de version) et MacOS."
+      ]
+    },
+    {
+      "name": "Numericable",
+      "position": "Technicien UAT",
+      "location_type": "Sur site",
+      "location": "Champs-sur-Marne, Île-de-France, France",
+      "startDate": "2005-01-01",
+      "endDate": "2005-12-31",
+      "summary": "Tests et validation des mises à jour du SI en préproduction.",
+      "highlights": [],
+      "skills": [],
+      "url": "",
+      "achievements": [],
+      "responsibilities": [
+        "Tests et validation des mises à jour du SI en préproduction.",
+        "Vérification des nouvelles offres et fonctionnalités avant mise en ligne."
+      ]
+    },
+    {
+      "name": "Ed L'épicier",
+      "position": "Technicien informatique",
+      "location_type": "Sur site",
+      "location": "France",
+      "startDate": "2004-01-01",
+      "endDate": "2004-12-31",
+      "summary": "Migration du parc informatique et déploiement des mises à jour sur plusieurs sites.",
+      "highlights": [],
+      "skills": [],
+      "url": "",
+      "achievements": [],
+      "responsibilities": [
+        "Migration du parc informatique vers Windows 2000 Server.",
+        "Standardisation des postes et serveurs (normalisation NetBIOS).",
+        "Déploiement des mises à jour et maintenance du parc.",
+        "Intervention sur le site de Marseille pour la mise en conformité des systèmes."
+      ]
     }
   ],
   "volunteer": [
@@ -137,38 +209,42 @@
       "url": ""
     }
   ],
-  "certificates": [
-    {
-      "name": "",
-      "date": "",
-      "issuer": "",
-      "url": ""
-    }
-  ],
+  "certificates": [],
   "skills": [
     {
-      "name": "Figma",
-      "level": "Intermédiaire"
+      "name": "Développement Web",
+      "level": "Avancé",
+      "keywords": ["HTML", "CSS", "PHP", "WordPress", "Symfony", "Twig", "Responsive"]
     },
     {
-      "name": "WordPress",
-      "level": "Intermédiaire"
+      "name": "Outils & Environnements",
+      "level": "Intermédiaire",
+      "keywords": ["Git", "GitHub", "Docker", "VS Code", "macOS", "Linux"]
     },
     {
-      "name": "Symfony",
-      "level": "Intermédiaire"
+      "name": "UI/UX & Design",
+      "level": "Intermédiaire",
+      "keywords": ["Figma", "Photoshop", "Canva"]
     },
     {
-      "name": "Twig",
-      "level": "Intermédiaire"
+      "name": "IA & Productivité",
+      "level": "Intermédiaire",
+      "keywords": ["LLM", "Prompting", "Automatisation", "Copilot"]
     },
     {
-      "name": "Docker",
-      "level": "Intermédiaire"
+      "name": "Support & Administration",
+      "level": "Intermédiaire",
+      "keywords": ["Support utilisateurs", "Maintenance PC", "Microsoft 365", "Diagnostic"]
     },
     {
-      "name": "Git",
-      "level": "Intermédiaire"
+      "name": "Cybersécurité",
+      "level": "Notions",
+      "keywords": ["Bonnes pratiques", "Sécurisation web", "Gestion des accès"]
+    },
+    {
+      "name": "Méthodologie",
+      "level": "Avancé",
+      "keywords": ["Veille technologique", "Autoformation", "Documentation", "Amélioration continue"]
     }
   ],
   "languages": [
@@ -182,6 +258,10 @@
     },
     {
       "language": "Malgache",
+      "fluency": "Courant"
+    },
+    {
+      "language": "Créole mauricien",
       "fluency": "Courant"
     }
   ],
@@ -197,22 +277,17 @@
       "name": "Histoire"
     }
   ],
-  "references": [
-    {
-      "name": "",
-      "reference": ""
-    }
-  ],
+  "references": [],
   "projects": [
     {
-      "name": "Portfolio personel",
+      "name": "Portfolio personnel",
       "isActive": true,
-      "description": "Un portefolio personnel pour montrer mes compétences et projets",
+      "description": "CV interactif avec thèmes, dark mode et optimisation impression, déployé sur nirina.rmnjs.org",
       "highlights": [
-        "Built with Astro.build"
+        "Astro · Tailwind CSS · TypeScript"
       ],
-      "url": "",
-      "github": "https://github.com"
+      "url": "https://nirina.rmnjs.org",
+      "github": ""
     }
   ]
 }

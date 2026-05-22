@@ -1,0 +1,42 @@
+---
+import Section from "../Section.astro";
+import { languages } from "@cv";
+
+const FLUENCY_LEVELS: Record<string, number> = {
+	"Langue maternelle": 5,
+	"Courant": 4,
+	"Avancé": 3,
+	"Intermédiaire": 2,
+	"Débutant": 1,
+};
+---
+
+<Section className={Astro.props.className} title="Langues">
+	<ul class="grid grid-cols-2 gap-x-4 gap-y-1.5 md:grid-cols-1 md:gap-y-2.5">
+		{
+			languages.map(({ language, fluency }) => {
+				const level = FLUENCY_LEVELS[fluency] ?? 3;
+				return (
+					<li class="flex flex-col gap-0.5">
+						<span class="text-sm font-medium">{language}</span>
+						<div class="flex items-center gap-2">
+							<div class="flex items-center gap-1">
+								{Array.from({ length: 5 }).map((_, i) => (
+									<span
+										class:list={[
+											"h-1.5 w-1.5 rounded-full",
+											i < level
+												? "bg-skin-hue"
+												: "bg-skin-muted/30",
+										]}
+									/>
+								))}
+							</div>
+							<span class="text-xs text-skin-muted">{fluency}</span>
+						</div>
+					</li>
+				);
+			})
+		}
+	</ul>
+</Section>
