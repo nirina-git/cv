@@ -12,15 +12,15 @@ const FLUENCY_LEVELS: Record<string, number> = {
 ---
 
 <Section className={Astro.props.className} title="Langues">
-	<ul class="grid grid-cols-2 gap-x-4 gap-y-1.5 md:grid-cols-1 md:gap-y-2.5">
+	<ul class="grid grid-cols-2 gap-x-4 gap-y-1.5 md:grid-cols-1 md:gap-y-2.5 print:grid-cols-1 print:gap-y-1">
 		{
 			languages.map(({ language, fluency }) => {
 				const level = FLUENCY_LEVELS[fluency] ?? 3;
 				return (
-					<li class="flex flex-col gap-0.5">
+					<li class="flex flex-col gap-0.5 print:flex-row print:items-center print:justify-between">
 						<span class="text-sm font-medium">{language}</span>
 						<div class="flex items-center gap-2">
-							<div class="flex items-center gap-1">
+							<div class="flex items-center gap-1 print:hidden">
 								{Array.from({ length: 5 }).map((_, i) => (
 									<span
 										class:list={[
