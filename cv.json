@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Nirina Ramamonjisoa",
-    "label": "Développeur Web & Support IT | Expérience Polyvalente",
+    "label": "Développeur Web · Symfony & WordPress · Remote",
     "image": "me_avatar.jpg",
     "email": "nirina.ramamonjisoa@gmail.com",
     "phone": "+33 6 29 61 01 26",
     "url": "",
-    "summary": "Passionné par la tech et l’expérience utilisateur, j’allie mes compétences en développement web (WordPress, Symfony, UX/UI) et en support IT pour apporter des solutions fiables et optimisées. Mon expérience en entreprise et en freelance m’a appris à travailler avec rigueur et réactivité.",
+    "summary": "Développeur web freelance spécialisé en Symfony, WordPress et design UX/UI. Fort de 10 ans d’expérience entre développement sur mesure et environnement IT d’entreprise (EY), j’interviens en remote sur des projets orientés performance et expérience utilisateur.",
     "theme": "blue",
     "location": {
       "address": "",
@@ -137,22 +137,27 @@
       "url": ""
     }
   ],
-  "certificates": [
-    {
-      "name": "",
-      "date": "",
-      "issuer": "",
-      "url": ""
-    }
-  ],
+  "certificates": [],
   "skills": [
     {
-      "name": "Figma",
+      "name": "HTML",
+      "level": "Avancé"
+    },
+    {
+      "name": "CSS",
+      "level": "Avancé"
+    },
+    {
+      "name": "PHP",
+      "level": "Intermédiaire"
+    },
+    {
+      "name": "MySQL",
       "level": "Intermédiaire"
     },
     {
       "name": "WordPress",
-      "level": "Intermédiaire"
+      "level": "Avancé"
     },
     {
       "name": "Symfony",
@@ -160,6 +165,10 @@
     },
     {
       "name": "Twig",
+      "level": "Intermédiaire"
+    },
+    {
+      "name": "Figma",
       "level": "Intermédiaire"
     },
     {
@@ -197,22 +206,17 @@
       "name": "Histoire"
     }
   ],
-  "references": [
-    {
-      "name": "",
-      "reference": ""
-    }
-  ],
+  "references": [],
   "projects": [
     {
-      "name": "Portfolio personel",
+      "name": "Portfolio personnel",
       "isActive": true,
-      "description": "Un portefolio personnel pour montrer mes compétences et projets",
+      "description": "CV interactif avec thèmes, dark mode et optimisation impression, déployé sur cv.rmnjs.org",
       "highlights": [
-        "Built with Astro.build"
+        "Astro · Tailwind CSS · TypeScript"
       ],
-      "url": "",
-      "github": "https://github.com"
+      "url": "https://cv.rmnjs.org",
+      "github": ""
     }
   ]
 }
