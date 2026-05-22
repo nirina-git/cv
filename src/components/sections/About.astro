@@ -3,10 +3,14 @@ import Section from "../Section.astro";
 
 import { basics } from "@cv";
 const { summary } = basics;
+
+const paragraphs = summary.split(/\n\n+/).flatMap(block =>
+  block.split(/\n/).filter(line => line.trim() !== '')
+);
 ---
 
 <Section title="À propos">
-	<p>
-		{summary}
-	</p>
+	<div class="flex flex-col gap-3">
+		{paragraphs.map(para => <p>{para}</p>)}
+	</div>
 </Section>
