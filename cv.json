@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Nirina Ramamonjisoa",
-    "label": "Développeur Web & Support IT | Expérience Polyvalente",
+    "label": "Développeur Web & Support IT | Profil Hybride | Télétravail France & Île Maurice",
     "image": "https://api.dicebear.com/9.x/notionists/svg?seed=Nirina&backgroundColor=b6e3f4",
     "email": "nirina@rmnjs.org",
     "phone": "+33 6 29 61 01 26",
     "url": "",
-    "summary": "Développeur web en formation avec une expérience en support technique et assistance utilisateurs.\nFormation progressive au développement de sites web et aux outils de travail collaboratif, avec une utilisation d’outils d’IA pour l’apprentissage, la documentation et l’optimisation des tâches.\nIntérêt pour l’UI/UX, la cybersécurité et les environnements Microsoft.",
+    "summary": "Profil hybride développement web et support IT, avec plus de 15 ans d'expérience dans des environnements techniques variés. Autonome sur la création de sites web (WordPress, Bootstrap, Astro) et la gestion de projets de A à Z : hébergement sur VPS, déploiement via Dokploy, versioning Git. Solide expérience en support utilisateur, administration système et migration d'outils. Utilisation régulière des outils d'IA pour la documentation, l'automatisation et la veille technologique. Disponible en télétravail depuis la France ou l'Île Maurice.",
     "theme": "blue",
     "location": {
       "address": "",
@@ -31,15 +31,16 @@
       "location": "France",
       "startDate": "2023-01-01",
       "endDate": null,
-      "summary": "Création et développement de sites web sur mesure pour des clients variés, en télétravail.",
+      "summary": "Développement de projets personnels et réalisations pour particuliers : CV interactif, portfolio, projets en cours.",
       "highlights": [],
-      "skills": ["HTML", "CSS", "WordPress", "Symfony", "Twig", "Docker", "Git", "Figma"],
+      "skills": ["HTML", "CSS", "WordPress", "Astro", "Tailwind CSS", "TypeScript", "Docker", "Git", "Figma"],
       "url": "",
       "achievements": [],
       "responsibilities": [
-        "Création et développement de sites web en WordPress, Symfony, HTML, CSS, JS.",
-        "Gestion de l’hébergement, du déploiement et du versioning avec Docker et Git.",
-        "Conception UX/UI et intégration graphique."
+        "Conception et développement de sites web (WordPress, Astro, HTML/CSS)",
+        "Gestion de l'hébergement sur VPS Ubuntu avec Dokploy",
+        "Versioning avec Git et GitHub",
+        "Conception UX/UI et intégration graphique (Figma, Elementor)"
       ]
     },
     {
@@ -49,18 +50,18 @@
       "location": "Courbevoie, Île-de-France, France",
       "startDate": "2015-01-01",
       "endDate": "2022-01-01",
-      "summary": "Gestion du standard téléphonique de haut niveau d’EY France (via Phone Régie), avec un rôle clé dans la formation et la transition vers le télétravail.",
+      "summary": "Gestion du standard téléphonique de haut niveau d'EY France (via Phone Régie), avec un rôle clé dans la formation et la transition vers le télétravail.",
       "highlights": [],
       "skills": ["Word", "Excel", "Outlook", "Teams", "Skype"],
       "url": "https://www.ey.com",
       "achievements": [
-        "Participation à la migration du standard vers Attendant Pro.",
-        "Contribution à la transition vers un standard 100 % télétravail."
+        "Participation aux tests UAT en préproduction lors de la migration vers Attendant Pro",
+        "Contribution à la transition vers un standard 100 % télétravail"
       ],
       "responsibilities": [
-        "Gestion d’un standard téléphonique de haut niveau (EY France).",
-        "Maîtrise des outils de gestion des appels et de la relation client.",
-        "Formation des nouveaux standardistes et gestion d’équipe (suppléance du responsable)."
+        "Gestion d'un standard téléphonique de haut niveau (EY France)",
+        "Maîtrise des outils de gestion des appels et de la relation client",
+        "Formation des nouveaux standardistes et suppléance du responsable"
       ]
     },
     {
@@ -76,14 +77,14 @@
       "url": "",
       "achievements": [],
       "responsibilities": [
-        "Conception de sites web pour artisans et e-commerce en Martinique.",
-        "Création d’éléments graphiques (bannières, logos, icônes).",
-        "Travail sur HTML, CSS et premiers pas en JavaScript."
+        "Conception de sites web pour artisans et boutiques e-commerce",
+        "Création d'éléments graphiques (bannières, logos, icônes)",
+        "Intégration HTML, CSS et premiers pas en JavaScript"
       ]
     },
     {
-      "name": "Collège Paul Eluard",
-      "position": "Assistant d’éducation",
+      "name": "Collège Paul Éluard",
+      "position": "Assistant d'éducation",
       "location_type": "Sur site",
       "location": "Bonneuil-sur-Marne, Île-de-France, France",
       "startDate": "2009-01-01",
@@ -93,16 +94,12 @@
       "skills": [],
       "url": "",
       "achievements": [],
-      "responsibilities": [
-        "Surveillance et encadrement des élèves.",
-        "Aide aux devoirs et suivi pédagogique.",
-        "Gestion des relations avec les parents et résolution de conflits."
-      ]
+      "responsibilities": []
     },
     {
       "name": "Comité de Construction Régional",
       "position": "Technicien informatique",
-      "location_type": "Hybrid",
+      "location_type": "Hybride",
       "location": "France",
       "startDate": "2008-01-01",
       "endDate": "2012-01-01",
@@ -112,9 +109,9 @@
       "url": "",
       "achievements": [],
       "responsibilities": [
-        "Maintenance et administration des postes de travail (mises à jour, sauvegarde, sécurité).",
-        "Installation et gestion des réseaux informatiques temporaires sur les chantiers.",
-        "Support utilisateur sur site et à distance (hotline et dépannage)."
+        "Maintenance et administration des postes de travail (mises à jour, sauvegarde, sécurité)",
+        "Installation et gestion des réseaux informatiques temporaires sur chantiers",
+        "Support utilisateur sur site et à distance (hotline et dépannage)"
       ]
     },
     {
@@ -124,16 +121,16 @@
       "location": "Paris, Île-de-France, France",
       "startDate": "2006-01-01",
       "endDate": "2008-01-01",
-      "summary": "Participation au développement des Univers Netvibes et création d’éléments graphiques au sein d’une équipe de développeurs.",
+      "summary": "Participation au développement des Univers Netvibes et création d'éléments graphiques.",
       "highlights": [],
-      "skills": ["HTML", "CSS"],
+      "skills": ["HTML", "CSS", "Subversion"],
       "url": "",
       "achievements": [],
       "responsibilities": [
-        "Participation au développement des Univers Netvibes (mini-sites personnalisés à base de widgets).",
-        "Création d’éléments graphiques (bannières, icônes) et intégration HTML/CSS.",
-        "Collaboration avec une équipe de développeurs sur un projet à grande échelle.",
-        "Expérience avec Subversion (gestion de version) et MacOS."
+        "Développement des Univers Netvibes (mini-sites personnalisés à base de widgets)",
+        "Création d'éléments graphiques (bannières, icônes) et intégration HTML/CSS",
+        "Collaboration en équipe sur un projet à grande échelle",
+        "Utilisation de Subversion (gestion de version) et macOS"
       ]
     },
     {
@@ -149,8 +146,8 @@
       "url": "",
       "achievements": [],
       "responsibilities": [
-        "Tests et validation des mises à jour du SI en préproduction.",
-        "Vérification des nouvelles offres et fonctionnalités avant mise en ligne."
+        "Tests et validation des mises à jour du SI en préproduction",
+        "Vérification des nouvelles offres et fonctionnalités avant mise en ligne"
       ]
     },
     {
@@ -166,10 +163,10 @@
       "url": "",
       "achievements": [],
       "responsibilities": [
-        "Migration du parc informatique vers Windows 2000 Server.",
-        "Standardisation des postes et serveurs (normalisation NetBIOS).",
-        "Déploiement des mises à jour et maintenance du parc.",
-        "Intervention sur le site de Marseille pour la mise en conformité des systèmes."
+        "Migration du parc informatique vers Windows 2000 Server",
+        "Standardisation des postes et serveurs (normalisation NetBIOS)",
+        "Déploiement des mises à jour et maintenance du parc",
+        "Intervention sur le site de Marseille pour la mise en conformité des systèmes"
       ]
     }
   ],
@@ -214,12 +211,32 @@
     {
       "name": "Développement Web",
       "level": "Avancé",
-      "keywords": ["HTML", "CSS", "PHP", "WordPress", "Symfony", "Twig", "Responsive"]
+      "keywords": ["HTML", "CSS", "JavaScript", "PHP"]
     },
     {
-      "name": "Outils & Environnements",
+      "name": "CMS & Frameworks",
+      "level": "Avancé",
+      "keywords": ["WordPress", "Bootstrap", "Twig", "Symfony"]
+    },
+    {
+      "name": "En apprentissage",
+      "level": "Débutant",
+      "keywords": ["Astro", "Tailwind CSS", "TypeScript"]
+    },
+    {
+      "name": "DevOps & Déploiement",
       "level": "Intermédiaire",
-      "keywords": ["Git", "GitHub", "Docker", "VS Code", "macOS", "Linux"]
+      "keywords": ["Git", "Docker", "VPS / Dokploy", "GitHub"]
+    },
+    {
+      "name": "Environnements",
+      "level": "Avancé",
+      "keywords": ["VS Code", "Linux", "macOS"]
+    },
+    {
+      "name": "Base de données",
+      "level": "Notions",
+      "keywords": ["SQL", "MySQL"]
     },
     {
       "name": "UI/UX & Design",
@@ -229,22 +246,12 @@
     {
       "name": "IA & Productivité",
       "level": "Intermédiaire",
-      "keywords": ["LLM", "Prompting", "Automatisation", "Copilot"]
+      "keywords": ["LLM / Prompting", "GitHub Copilot", "Automatisation"]
     },
     {
       "name": "Support & Administration",
       "level": "Intermédiaire",
-      "keywords": ["Support utilisateurs", "Maintenance PC", "Microsoft 365", "Diagnostic"]
-    },
-    {
-      "name": "Cybersécurité",
-      "level": "Notions",
-      "keywords": ["Bonnes pratiques", "Sécurisation web", "Gestion des accès"]
-    },
-    {
-      "name": "Méthodologie",
-      "level": "Avancé",
-      "keywords": ["Veille technologique", "Autoformation", "Documentation", "Amélioration continue"]
+      "keywords": ["Support utilisateurs", "Microsoft 365", "Maintenance PC", "Diagnostic réseau"]
     }
   ],
   "languages": [
@@ -280,7 +287,7 @@
   "references": [],
   "projects": [
     {
-      "name": "Portfolio personnel",
+      "name": "Portfolio & CV Interactif",
       "isActive": true,
       "description": "CV interactif avec thèmes, dark mode et optimisation impression, déployé sur nirina.rmnjs.org",
       "highlights": [
