@@ -5,5 +5,11 @@ Sentry.init({
   tracesSampleRate: 1.0,
   replaysSessionSampleRate: 0.1,
   replaysOnErrorSampleRate: 1.0,
-  integrations: [Sentry.replayIntegration()],
+  integrations: [
+    Sentry.browserTracingIntegration(),
+    Sentry.replayIntegration(),
+  ],
 });
+
+// TODO: remove after confirming events appear in Sentry dashboard
+Sentry.captureMessage("Sentry pipeline test — page load", "info");
