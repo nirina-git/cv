@@ -6,7 +6,7 @@
     "email": "nirina@rmnjs.org",
     "phone": "+33 6 29 61 01 26",
     "url": "",
-    "summary": "Profil hybride développement web et support IT, avec plus de 15 ans d'expérience dans des environnements techniques variés. Autonome sur la création de sites web (WordPress, Bootstrap, Astro) et la gestion de projets de A à Z : hébergement sur VPS, déploiement via Dokploy, versioning Git. Solide expérience en support utilisateur, administration système et migration d'outils. Utilisation régulière des outils d'IA pour la documentation, l'automatisation et la veille technologique. Disponible en télétravail depuis la France ou l'Île Maurice.",
+    "summary": "Profil hybride développement web et support IT, avec plus de 15 ans d'expérience dans des environnements techniques variés. Autonome sur la création d'applications et sites web (Astro, Nuxt, Tailwind CSS) et la gestion de projets de A à Z : base de données PostgreSQL, hébergement sur VPS Linux, déploiement via Docker et Dokploy, versioning Git. Solide expérience en support utilisateur, administration système et migration d'outils. Utilisation régulière des outils d'IA pour le développement, l'automatisation et la veille technologique. Disponible en télétravail depuis la France ou l'Île Maurice.",
     "theme": "blue",
     "location": {
       "address": "",
@@ -25,22 +25,44 @@
   },
   "work": [
     {
+      "name": "Tech In France",
+      "position": "Développeur & Administrateur O365",
+      "location_type": "À distance",
+      "location": "France",
+      "startDate": "2025-07-01",
+      "endDate": null,
+      "summary": "En formation développeur d'applications puis cybersécurité, en parallèle d'activités opérationnelles : administration Microsoft 365 et développement d'outils internes assisté par IA (vibe coding).",
+      "highlights": [],
+      "skills": ["Microsoft 365", "Administration O365", "Vibe coding / IA", "Cybersécurité"],
+      "url": "",
+      "achievements": [],
+      "responsibilities": [
+        "Administration de l'environnement Microsoft Office 365 (utilisateurs, licences, services)",
+        "Développement d'outils internes assisté par IA (vibe coding)",
+        "Formation développeur d'applications puis cybersécurité"
+      ]
+    },
+    {
       "name": "Freelance",
       "position": "Webdesigner & Développeur Web",
       "location_type": "À distance",
       "location": "France",
       "startDate": "2023-01-01",
       "endDate": null,
-      "summary": "Développement de projets personnels et réalisations pour particuliers : CV interactif, portfolio, projets en cours.",
+      "summary": "Conception et développement d'applications et sites web en autonomie, avec un workflow assisté par IA : catalogue de matériels, CRM, calendrier de planification, carte de géolocalisation d'adresses avec photos, refonte de CV interactif.",
       "highlights": [],
-      "skills": ["HTML", "CSS", "WordPress", "Astro", "Tailwind CSS", "TypeScript", "Docker", "Git", "Figma"],
+      "skills": ["Astro", "Nuxt", "TypeScript", "Tailwind CSS", "HTML", "CSS", "PostgreSQL", "Docker", "Dokploy", "VPS / Linux", "Git", "IA / LLM"],
       "url": "",
-      "achievements": [],
+      "achievements": [
+        "Développement d'un catalogue de matériels (projet le plus abouti)",
+        "Plusieurs applications déployées en environnement privé"
+      ],
       "responsibilities": [
-        "Conception et développement de sites web (WordPress, Astro, HTML/CSS)",
-        "Gestion de l'hébergement sur VPS Ubuntu avec Dokploy",
-        "Versioning avec Git et GitHub",
-        "Conception UX/UI et intégration graphique (Figma, Elementor)"
+        "Conception et développement d'applications web (Astro, Nuxt, HTML/CSS, Tailwind CSS, TypeScript)",
+        "Développement assisté par IA (LLM / prompting)",
+        "Modélisation et gestion de bases de données PostgreSQL",
+        "Hébergement et déploiement sur VPS Linux via Dokploy et Docker",
+        "Versioning avec Git et GitHub"
       ]
     },
     {
@@ -71,7 +93,7 @@
       "location": "France",
       "startDate": "2013-01-01",
       "endDate": "2015-01-01",
-      "summary": "Conception de sites web pour artisans et e-commerce en Martinique.",
+      "summary": "Conception de sites web pour artisans et boutiques e-commerce (dont Eden Service Pro).",
       "highlights": [],
       "skills": ["WordPress", "PHP", "HTML", "CSS", "MySQL"],
       "url": "",
@@ -105,12 +127,13 @@
       "endDate": "2012-01-01",
       "summary": "Maintenance et administration du parc informatique, support utilisateur sur site et à distance.",
       "highlights": [],
-      "skills": [],
+      "skills": ["Windows XP / 7", "Active Directory", "Administration réseau", "Sauvegarde & clonage", "Switch / Wi-Fi", "Antivirus"],
       "url": "",
       "achievements": [],
       "responsibilities": [
-        "Maintenance et administration des postes de travail (mises à jour, sauvegarde, sécurité)",
-        "Installation et gestion des réseaux informatiques temporaires sur chantiers",
+        "Maintenance et administration des postes de travail (Windows XP/7, Active Directory, mises à jour, sauvegarde, antivirus)",
+        "Installation et gestion de réseaux temporaires sur chantiers (switchs, Wi-Fi, câblage, partage de connexion)",
+        "Clonage et déploiement de postes de travail",
         "Support utilisateur sur site et à distance (hotline et dépannage)"
       ]
     },
@@ -121,14 +144,17 @@
       "location": "Paris, Île-de-France, France",
       "startDate": "2006-01-01",
       "endDate": "2008-01-01",
-      "summary": "Participation au développement des Univers Netvibes et création d'éléments graphiques.",
+      "summary": "Intégration et design graphique pour les Univers Netvibes, en environnement startup sur une plateforme à audience mondiale (concurrent direct d'iGoogle).",
       "highlights": [],
-      "skills": ["HTML", "CSS", "Subversion"],
+      "skills": ["HTML", "CSS", "JavaScript", "Photoshop", "Subversion", "Widgets / API Netvibes"],
       "url": "",
-      "achievements": [],
+      "achievements": [
+        "Contribution à une plateforme web d'envergure mondiale, concurrente directe d'iGoogle",
+        "Expérience en environnement startup à forte croissance"
+      ],
       "responsibilities": [
         "Développement des Univers Netvibes (mini-sites personnalisés à base de widgets)",
-        "Création d'éléments graphiques (bannières, icônes) et intégration HTML/CSS",
+        "Intégration HTML/CSS et création d'éléments graphiques (bannières, icônes)",
         "Collaboration en équipe sur un projet à grande échelle",
         "Utilisation de Subversion (gestion de version) et macOS"
       ]
@@ -140,14 +166,16 @@
       "location": "Champs-sur-Marne, Île-de-France, France",
       "startDate": "2005-01-01",
       "endDate": "2005-12-31",
-      "summary": "Tests et validation des mises à jour du SI en préproduction.",
+      "summary": "Recette et validation des mises à jour du SI en préproduction, notamment du CRM gérant les offres TV/Internet.",
       "highlights": [],
-      "skills": [],
+      "skills": ["Recette / UAT", "SQL", "Rédaction de tests"],
       "url": "",
       "achievements": [],
       "responsibilities": [
-        "Tests et validation des mises à jour du SI en préproduction",
-        "Vérification des nouvelles offres et fonctionnalités avant mise en ligne"
+        "Recette et validation des mises à jour du SI en préproduction (CRM, offres TV/Internet)",
+        "Rédaction de cahiers de tests et remontée des bugs",
+        "Vérification des nouvelles offres et fonctionnalités avant mise en ligne",
+        "Interrogation de bases de données (SQL) pour le contrôle des données"
       ]
     },
     {
@@ -157,13 +185,16 @@
       "location": "France",
       "startDate": "2004-01-01",
       "endDate": "2004-12-31",
-      "summary": "Migration du parc informatique et déploiement des mises à jour sur plusieurs sites.",
+      "summary": "Migration et standardisation d'un parc d'environ 80 postes sur les sites de Paris et Marseille, et préparation du déploiement Active Directory.",
       "highlights": [],
-      "skills": [],
+      "skills": ["Windows 2000 Server", "Active Directory", "Réseau / NetBIOS", "Déploiement de postes", "Support utilisateur"],
       "url": "",
-      "achievements": [],
+      "achievements": [
+        "Migration et standardisation d'un parc d'environ 80 postes (Paris et Marseille)"
+      ],
       "responsibilities": [
-        "Migration du parc informatique vers Windows 2000 Server",
+        "Migration des postes de travail vers Windows 2000",
+        "Préparation du plan de déploiement Active Directory",
         "Standardisation des postes et serveurs (normalisation NetBIOS)",
         "Déploiement des mises à jour et maintenance du parc",
         "Intervention sur le site de Marseille pour la mise en conformité des systèmes"
@@ -181,6 +212,14 @@
     }
   ],
   "education": [
+    {
+      "institution": "Tech In France",
+      "area": "Développeur d'applications puis Cybersécurité",
+      "studyType": "Formation professionnelle",
+      "startDate": "2025-07-01",
+      "endDate": null,
+      "url": ""
+    },
     {
       "institution": "IUT de Champs-sur-Marne",
       "area": "Service et Technique de l'Information et de la Communication",
@@ -214,14 +253,14 @@
       "keywords": ["HTML", "CSS", "JavaScript", "PHP"]
     },
     {
-      "name": "CMS & Frameworks",
-      "level": "Avancé",
-      "keywords": ["WordPress", "Bootstrap", "Twig", "Symfony"]
+      "name": "Frameworks Front",
+      "level": "Intermédiaire",
+      "keywords": ["Astro", "Nuxt", "Vue 3", "Svelte / SvelteKit", "Tailwind CSS", "TypeScript"]
     },
     {
-      "name": "En apprentissage",
-      "level": "Débutant",
-      "keywords": ["Astro", "Tailwind CSS", "TypeScript"]
+      "name": "Back-end & ORM",
+      "level": "Intermédiaire",
+      "keywords": ["Node.js", "Express", "Prisma", "Drizzle", "Supabase"]
     },
     {
       "name": "DevOps & Déploiement",
@@ -229,24 +268,24 @@
       "keywords": ["Git", "Docker", "VPS / Dokploy", "GitHub"]
     },
     {
+      "name": "Bases de données",
+      "level": "Intermédiaire",
+      "keywords": ["PostgreSQL", "SQLite", "MySQL", "SQL"]
+    },
+    {
       "name": "Environnements",
       "level": "Avancé",
       "keywords": ["VS Code", "Linux", "macOS"]
     },
     {
-      "name": "Base de données",
-      "level": "Notions",
-      "keywords": ["SQL", "MySQL"]
-    },
-    {
       "name": "UI/UX & Design",
       "level": "Intermédiaire",
-      "keywords": ["Figma", "Photoshop", "Canva"]
+      "keywords": ["Photoshop", "Canva"]
     },
     {
       "name": "IA & Productivité",
       "level": "Intermédiaire",
-      "keywords": ["LLM / Prompting", "GitHub Copilot", "Automatisation"]
+      "keywords": ["LLM / Prompting", "API Gemini", "GitHub Copilot", "Vibe coding", "Automatisation"]
     },
     {
       "name": "Support & Administration",
@@ -294,6 +333,46 @@
         "Astro · Tailwind CSS · TypeScript"
       ],
       "url": "https://nirina.rmnjs.org",
+      "github": ""
+    },
+    {
+      "name": "Katalog",
+      "isActive": false,
+      "description": "Catalogue de matériels avec import/export Excel et gestion d'images. Projet le plus abouti, déployé en environnement privé.",
+      "highlights": [
+        "Nuxt 3 · Vue 3 · Prisma · PostgreSQL · Tailwind CSS · TypeScript"
+      ],
+      "url": "",
+      "github": ""
+    },
+    {
+      "name": "Lemuel CRM",
+      "isActive": false,
+      "description": "CRM de prospection B2B mono-utilisateur.",
+      "highlights": [
+        "Node.js · Express · SQLite · Vue 3 · Gemini (IA)"
+      ],
+      "url": "",
+      "github": ""
+    },
+    {
+      "name": "FDHN",
+      "isActive": false,
+      "description": "Application de gestion de programme permettant d'organiser et planifier son emploi du temps, avec export PDF.",
+      "highlights": [
+        "SvelteKit · Svelte 5 · Drizzle ORM · SQLite · Tailwind CSS · TypeScript"
+      ],
+      "url": "",
+      "github": ""
+    },
+    {
+      "name": "Kartara",
+      "isActive": false,
+      "description": "Carte interactive pour géolocaliser des adresses avec photos associées.",
+      "highlights": [
+        "HTML · JavaScript · Leaflet · Supabase"
+      ],
+      "url": "",
       "github": ""
     }
   ]
