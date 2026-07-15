@@ -1,6 +1,6 @@
 # CV — Nirina Ramamonjisoa
 
-CV/portfolio imprimable, en ligne sur [cv.rmnjs.org](https://cv.rmnjs.org).
+CV/portfolio imprimable, en ligne sur [nirina.rmnjs.org](https://nirina.rmnjs.org).
 
 Basé sur le template [Smilesharks/dev-portfolio](https://github.com/Smilesharks/dev-portfolio) (lui-même inspiré de [BartoszJarocki/cv](https://github.com/BartoszJarocki/cv) et [midudev/minimalist-portfolio-json](https://github.com/midudev/minimalist-portfolio-json)).
 

@@ -3,7 +3,7 @@ import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  site: 'https://cv.rmnjs.org',
+  site: 'https://nirina.rmnjs.org',
   base: '/',
   trailingSlash: 'always',
   integrations: [sitemap()],
