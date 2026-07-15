@@ -1,0 +1,28 @@
+/*
+ * Le reset de hotkeypad ({all: unset} sur *) doit vivre dans la couche la
+ * plus basse : non-layerisé, il écraserait toutes les utilities Tailwind v4.
+ */
+@layer reset;
+@import "hotkeypad/reset.css" layer(reset);
+@import "tailwindcss";
+@import "./themes.css";
+
+/* Le mode sombre est piloté par la classe .dark sur <html> (ThemeSwitch). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * Couleurs "skin" : chaque utilitaire (text-skin-*, bg-skin-*, …) référence
+ * les variables de themes.css, résolues à l'usage pour suivre le thème actif.
+ * `inline` est indispensable : sans lui les variables seraient figées sur :root.
+ */
+@theme inline {
+  --color-skin-base: rgb(var(--color-text-base));
+  --color-skin-muted: rgb(var(--color-text-muted));
+  --color-skin-inverted: rgb(var(--color-text-inverted));
+  --color-skin-fill: rgb(var(--color-fill));
+  --color-skin-hue: rgb(var(--color));
+  --color-skin-neutral: rgb(var(--muted));
+  --color-skin-button-accent: rgb(var(--color-button-accent));
+  --color-skin-button-accent-hover: rgb(var(--color-button-accent-hover));
+  --color-skin-button-muted: rgb(var(--color-button-muted));
+}

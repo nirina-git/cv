@@ -1,4 +1,5 @@
 ---
+import "@/styles/global.css";
 import { basics } from "@cv";
 import Vengeance from "@/layouts/Vengeance.astro";
 
@@ -34,9 +35,6 @@ const { image, summary, url, theme } = basics;
 		<meta name="twitter:description" content={summary} />
 		<meta name="twitter:image" content="" />
 
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim" />
-
-		<link rel="stylesheet" href={`${import.meta.env.BASE_URL}themes/themes.css`} />
 		<Vengeance />
 	</head>
 	<body data-theme={theme} class="relative bg-skin-fill">
@@ -45,30 +43,7 @@ const { image, summary, url, theme } = basics;
 		</div>
 		<slot />
 		<style is:global>
-			/* ── Blue theme – Light ── */
-			body[data-theme="blue"] {
-				--color-text-base: 15, 23, 42;
-				--color-text-muted: 100, 116, 139;
-				--color-text-inverted: 255, 255, 255;
-				--color-fill: 255, 255, 255;
-				--muted: 203, 213, 225;
-				--color: 59, 130, 246;
-				--color-button-accent: 59, 130, 246;
-				--color-button-accent-hover: 37, 99, 235;
-				--color-button-muted: 241, 245, 249;
-			}
-			/* ── Blue theme – Dark ── */
-			.dark body[data-theme="blue"] {
-				--color-text-base: 248, 250, 252;
-				--color-text-muted: 148, 163, 184;
-				--color-text-inverted: 15, 23, 42;
-				--color-fill: 28, 28, 36;
-				--muted: 55, 65, 81;
-				--color: 96, 165, 250;
-				--color-button-accent: 96, 165, 250;
-				--color-button-accent-hover: 147, 197, 253;
-				--color-button-muted: 38, 38, 50;
-			}
+			@reference "../styles/global.css";
 
 			body,
 			figure {
@@ -126,7 +101,7 @@ const { image, summary, url, theme } = basics;
 				@apply border border-red-500/50 bg-red-500/5;
 			}
 			#hotkeypad [data-backdrop] {
-				@apply !bg-zinc-800 !opacity-80;
+				@apply bg-zinc-800! opacity-80!;
 			}
 
 			@media print {
