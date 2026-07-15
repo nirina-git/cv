@@ -1,7 +1,7 @@
 ---
 import "@/styles/global.css";
-import { basics } from "@cv";
 import Vengeance from "@/layouts/Vengeance.astro";
+import { getCV, toLocale } from "@/i18n/cv";
 
 interface Props {
 	title: string;
@@ -9,14 +9,20 @@ interface Props {
 
 const { title } = Astro.props;
 
-const { image, summary, theme } = basics;
+const locale = toLocale(Astro.currentLocale);
+const { image, summary, theme } = getCV(locale).basics;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL("og.png", Astro.site);
+const alternates = [
+	{ hreflang: "fr", href: new URL("/", Astro.site) },
+	{ hreflang: "en", href: new URL("/en/", Astro.site) },
+	{ hreflang: "x-default", href: new URL("/", Astro.site) },
+];
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={locale}>
 	<head>
 		<meta charset="UTF-8" />
 		<title>{title}</title>
@@ -24,6 +30,7 @@ const ogImage = new URL("og.png", Astro.site);
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="canonical" href={canonical} />
+		{alternates.map(({ hreflang, href }) => <link rel="alternate" hreflang={hreflang} href={href} />)}
 		<link rel="preload" as="image" href={image} />
 
 		<meta property="og:url" content={canonical} />

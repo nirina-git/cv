@@ -1,0 +1,30 @@
+---
+import { toLocale } from "@/i18n/cv";
+
+const current = toLocale(Astro.currentLocale);
+
+const links = [
+	{ code: "fr", label: "FR", href: "/", title: "Version française" },
+	{ code: "en", label: "EN", href: "/en/", title: "English version" },
+] as const;
+---
+
+<nav aria-label="Langue / Language" class="flex items-center gap-1 rounded-md text-sm font-medium">
+	{
+		links.map(({ code, label, href, title }) => (
+			<a
+				href={href}
+				title={title}
+				aria-current={code === current ? "page" : undefined}
+				class:list={[
+					"rounded-md px-2 py-1 transition-colors",
+					code === current
+						? "bg-skin-button-accent text-skin-inverted"
+						: "text-skin-muted hover:bg-skin-button-muted hover:text-skin-base",
+				]}
+			>
+				{label}
+			</a>
+		))
+	}
+</nav>

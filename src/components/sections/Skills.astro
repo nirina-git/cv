@@ -17,7 +17,11 @@ import Kotlin from "@/icons/kotlin.astro";
 import Flutter from "@/icons/flutter.astro";
 import Figma from "@/icons/Figma.astro";
 import Gitlab from "@/icons/Gitlab.astro";
-import { skills } from "@cv";
+import { getCV } from "@/i18n/cv";
+import { useTranslations } from "@/i18n/ui";
+
+const t = useTranslations(Astro.currentLocale);
+const { skills } = getCV(Astro.currentLocale);
 
 const SKILLS_ICONS: Record<string, any> = {
 	HTML,
@@ -40,7 +44,7 @@ const SKILLS_ICONS: Record<string, any> = {
 };
 ---
 
-<Section className={Astro.props.className} title="Compétences">
+<Section className={Astro.props.className} title={t("section.skills")}>
 	<div class="flex flex-col gap-5">
 		{
 			skills.map(({ name, keywords }) => (

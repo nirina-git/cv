@@ -1,17 +1,26 @@
 ---
 import Section from "../Section.astro";
-import { languages } from "@cv";
+import { getCV } from "@/i18n/cv";
+import { useTranslations } from "@/i18n/ui";
+
+const t = useTranslations(Astro.currentLocale);
+const { languages } = getCV(Astro.currentLocale);
 
 const FLUENCY_LEVELS: Record<string, number> = {
 	"Langue maternelle": 5,
+	"Native": 5,
 	"Courant": 4,
+	"Fluent": 4,
 	"Avancé": 3,
+	"Advanced": 3,
 	"Intermédiaire": 2,
+	"Intermediate": 2,
 	"Débutant": 1,
+	"Beginner": 1,
 };
 ---
 
-<Section className={Astro.props.className} title="Langues">
+<Section className={Astro.props.className} title={t("section.languages")}>
 	<ul class="grid grid-cols-2 gap-x-4 gap-y-1.5 md:grid-cols-1 md:gap-y-2.5 print:grid-cols-1 print:gap-y-1">
 		{
 			languages.map(({ language, fluency }) => {
