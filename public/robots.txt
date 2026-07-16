@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nirina.rmnjs.org/sitemap-index.xml

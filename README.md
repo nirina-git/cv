@@ -1,61 +1,62 @@
-## Print-friendly portfolio CV
+# CV — Nirina Ramamonjisoa
 
-![preview](https://github.com/user-attachments/assets/44c47034-06e4-412a-b9dd-014593b32215)
+CV/portfolio imprimable, en ligne sur [nirina.rmnjs.org](https://nirina.rmnjs.org).
 
-![Astro Badge](https://img.shields.io/badge/Astro-BC52EE?logo=astro&logoColor=fff&style=flat)
-![TailwindCSS](https://img.shields.io/badge/tailwindcss-0F172A?&logo=tailwindcss)
-![GitHub stars](https://img.shields.io/github/stars/Smilesharks/dev-portfolio)
-![GitHub issues](https://img.shields.io/github/issues/Smilesharks/dev-portfolio)
-![GitHub forks](https://img.shields.io/github/forks/Smilesharks/dev-portfolio)
-![GitHub PRs](https://img.shields.io/github/issues-pr/Smilesharks/dev-portfolio)
+Basé sur le template [Smilesharks/dev-portfolio](https://github.com/Smilesharks/dev-portfolio) (lui-même inspiré de [BartoszJarocki/cv](https://github.com/BartoszJarocki/cv) et [midudev/minimalist-portfolio-json](https://github.com/midudev/minimalist-portfolio-json)).
 
-## 🛠️ Stack
+## Stack
 
-- [**Astro**](https://astro.build/) - The next-gen web framework.
-- [**Typescript**](https://www.typescriptlang.org/) - JavaScript with type syntax.
-- [**Ninja Keys**](https://github.com/ssleptsov/ninja-keys) - Dropdown menu with keyboard shortcuts made in pure JavaScript.
+- [**Astro**](https://astro.build/) + [**Tailwind CSS**](https://tailwindcss.com/) + TypeScript
+- [**hotkeypad**](https://github.com/pheralb/hotkeypad) — palette de commandes (`Cmd/Ctrl + K`)
+- Contenu au format [JSON Resume](https://jsonresume.org/schema/) dans `cv.json`
 
-## 🚀 Getting Started
-
-### 1. Use this Repo as an Astro Project Template
-
-- I use [pnpm](https://pnpm.io/installation) as my package manager.
+## Développement
 
 ```bash
-# Enable pnpm on MacOS, WSL & Linux:
-corepack enable
-corepack prepare pnpm@latest --activate
+npm install
+npm run dev       # http://localhost:4321
 ```
 
-# Initialize the project
+| Commande          | Action                                              |
+| :---------------- | :-------------------------------------------------- |
+| `npm run dev`     | Serveur de développement sur `localhost:4321`       |
+| `npm run build`   | Vérifie les types (`astro check`) et build `./dist/` |
+| `npm run preview` | Prévisualisation locale du build                    |
+
+## Contenu
+
+Tout le contenu du CV (expériences, compétences, projets…) se modifie dans `cv.json`.
+
+Le thème de couleurs se choisit via `basics.theme` dans `cv.json` (`default`, `blue`, `red`, `green`, `cyber`), avec variantes dark automatiques. Les thèmes sont définis dans les feuilles de style du projet.
+
+## Déploiement
+
+Le site est déployé sur un VPS via [Dokploy](https://dokploy.com/) à partir du `Dockerfile` (build Astro multi-stage servi par nginx) :
+
 ```bash
-pnpm create astro@latest -- --template Smilesharks/dev-portfolio
+docker build -t cv .
+docker run -p 8080:80 cv
 ```
 
-### 2. Add Your Content:
+Le workflow GitHub Actions (`.github/workflows/ci.yml`) vérifie que le build passe sur chaque push/PR ; le déploiement est déclenché côté Dokploy.
 
-Edit the `cv.json` file to create your own printable Portfolio/CV.
+## Analytics (Umami, optionnel)
 
-### 3. Launch the Development Server:
+Le site peut embarquer le script [Umami](https://umami.is/) (statistiques légères, sans cookies). Il n'est inclus dans le HTML que si les deux variables sont fournies **au build** (voir `.env.example`) :
 
-```bash
-# Enjoy the results
-pnpm dev
-```
-1. Open [**http://localhost:4321**](http://localhost:4321/) in your browser to view the result 🚀
+- `PUBLIC_UMAMI_SRC` — URL du script de l'instance (ex. `https://analytics.rmnjs.org/script.js`)
+- `PUBLIC_UMAMI_WEBSITE_ID` — identifiant du site dans Umami
 
-### 4. Customisable colours:
-Change the data-theme of `cv.json` and choose one of the colour themes defined in theme.css, red, blue, green, cyber and default, with its variants in dark mode, or create your own.
+### Déployer Umami sur le VPS via Dokploy
 
-## 🧞 Commands
+1. Dans Dokploy, créer un projet **umami** avec un service *Docker Compose* et le compose officiel :
+   PostgreSQL + `ghcr.io/umami-software/umami:postgresql-latest` (voir [docs Umami](https://umami.is/docs/install)). Définir `DATABASE_URL` et un `APP_SECRET` aléatoire.
+2. Exposer le service sur un sous-domaine (ex. `analytics.rmnjs.org`) via le reverse-proxy Dokploy, avec certificat TLS.
+3. Se connecter à Umami (admin/umami par défaut — changer le mot de passe), créer le site
+   *nirina.rmnjs.org* et récupérer son **Website ID**.
+4. Dans le service Dokploy du CV, renseigner les deux variables comme **build args** :
+   `PUBLIC_UMAMI_SRC=https://analytics.rmnjs.org/script.js` et `PUBLIC_UMAMI_WEBSITE_ID=<id>`, puis redéployer.
 
-|     | Command         | Action                                                                       |
-| :-- | :-------------- | :--------------------------------------------------------------------------- |
-| ⚙️  | `dev` o `start` | Launches a local development server at `localhost:4321`.                   |
-| ⚙️  | `build`         | Checks for errors and creates a production build in `./dist/`. |
-| ⚙️  | `preview`       | Local preview at `localhost:4321`                                       |
+## Licence
 
-
-CV JSON schema from [**jsonresume.org**](https://jsonresume.org/schema/)
-
-Based on [**Bartosz Jarocki - Print-friendly, minimalist CV page**](https://github.com/BartoszJarocki/cv) and [**Miguel Ángel Durán - minimalist-portfolio-json**](https://github.com/midudev/minimalist-portfolio-json)
+[MIT](LICENSE.txt)

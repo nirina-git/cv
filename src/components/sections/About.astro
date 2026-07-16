@@ -1,15 +1,17 @@
 ---
 import Section from "../Section.astro";
+import { getCV } from "@/i18n/cv";
+import { useTranslations } from "@/i18n/ui";
 
-import { basics } from "@cv";
-const { summary } = basics;
+const t = useTranslations(Astro.currentLocale);
+const { summary } = getCV(Astro.currentLocale).basics;
 
 const paragraphs = summary.split(/\n\n+/).flatMap(block =>
   block.split(/\n/).filter(line => line.trim() !== '')
 );
 ---
 
-<Section title="À propos">
+<Section title={t("section.about")}>
 	<div class="flex flex-col gap-3">
 		{paragraphs.map(para => <p>{para}</p>)}
 	</div>

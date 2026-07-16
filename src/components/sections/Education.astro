@@ -1,16 +1,18 @@
 ---
 import Section from "../Section.astro";
+import { getCV } from "@/i18n/cv";
+import { useTranslations } from "@/i18n/ui";
 
-import { education } from "@cv";
-import { certificates } from "@cv";
+const t = useTranslations(Astro.currentLocale);
+const { education, certificates } = getCV(Astro.currentLocale);
 ---
 
-<Section className={Astro.props.className} title="Formation">
+<Section className={Astro.props.className} title={t("section.education")}>
 	<ul class="space-y-4 py-3 print:space-y-0">
 		{
 			education.map(({ institution, startDate, endDate, area, url }) => {
 				const startYear = new Date(startDate).getFullYear();
-				const endYear = endDate != null ? new Date(endDate).getFullYear() : "Actual";
+				const endYear = endDate != null ? new Date(endDate).getFullYear() : t("date.present");
 				const years = `${startYear} - ${endYear}`;
 
 				return (
@@ -38,7 +40,7 @@ import { certificates } from "@cv";
 	{
 		certificates.length > 0 && (
 			<>
-				<h4>Certificates</h4>
+				<h4>{t("section.certificates")}</h4>
 				<ul class="space-y-4 py-3 print:space-y-0">
 					{certificates.map(({ name, date, issuer, url }) => {
 						const certificateYear = new Date(date).getFullYear();

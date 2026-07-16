@@ -1,0 +1,379 @@
+{
+  "basics": {
+    "name": "Nirina Ramamonjisoa",
+    "label": "Web Developer & IT Support | Hybrid Profile | Remote from France & Mauritius",
+    "image": "/me_avatar.jpg",
+    "email": "nirina@rmnjs.org",
+    "phone": "+33 6 29 61 01 26",
+    "url": "",
+    "summary": "Hybrid web development and IT support profile, with over 15 years of experience across varied technical environments. Autonomous in building web applications and websites (Astro, Nuxt, Tailwind CSS) and managing projects end to end: PostgreSQL databases, hosting on Linux VPS, deployment with Docker and Dokploy, Git versioning. Solid experience in user support, system administration and tool migrations. Regular use of AI tools for development, automation and technology watch. Available for remote work from France or Mauritius.",
+    "theme": "blue",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Remote",
+      "countryCode": "",
+      "region": ""
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "nirina-ramamonjisoa",
+        "url": "https://linkedin.com/in/nirina-ramamonjisoa"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Tech In France",
+      "position": "Developer & O365 Administrator",
+      "location_type": "Remote",
+      "location": "France",
+      "startDate": "2025-07-01",
+      "endDate": null,
+      "summary": "Training as an application developer, then in cybersecurity, alongside operational duties: Microsoft 365 administration and AI-assisted development of internal tools (vibe coding).",
+      "highlights": [],
+      "skills": ["Microsoft 365", "O365 administration", "Vibe coding / AI", "Cybersecurity"],
+      "url": "",
+      "achievements": [],
+      "responsibilities": [
+        "Administration of the Microsoft Office 365 environment (users, licenses, services)",
+        "AI-assisted development of internal tools (vibe coding)",
+        "Training as an application developer, then in cybersecurity"
+      ]
+    },
+    {
+      "name": "Freelance",
+      "position": "Web Designer & Web Developer",
+      "location_type": "Remote",
+      "location": "France",
+      "startDate": "2023-01-01",
+      "endDate": null,
+      "summary": "Autonomous design and development of web applications and websites, with an AI-assisted workflow: equipment catalog, CRM, planning calendar, address geolocation map with photos, interactive CV redesign.",
+      "highlights": [],
+      "skills": ["Astro", "Nuxt", "TypeScript", "Tailwind CSS", "HTML", "CSS", "PostgreSQL", "Docker", "Dokploy", "VPS / Linux", "Git", "AI / LLM"],
+      "url": "",
+      "achievements": [
+        "Development of an equipment catalog (most polished project)",
+        "Several applications deployed in private environments"
+      ],
+      "responsibilities": [
+        "Design and development of web applications (Astro, Nuxt, HTML/CSS, Tailwind CSS, TypeScript)",
+        "AI-assisted development (LLM / prompting)",
+        "PostgreSQL database modeling and management",
+        "Hosting and deployment on Linux VPS with Dokploy and Docker",
+        "Versioning with Git and GitHub"
+      ]
+    },
+    {
+      "name": "EY",
+      "position": "Switchboard Operator & Service Center",
+      "location_type": "Hybrid",
+      "location": "Courbevoie, Île-de-France, France",
+      "startDate": "2015-01-01",
+      "endDate": "2022-01-01",
+      "summary": "Management of EY France's high-level corporate switchboard (via Phone Régie), with a key role in training and in the transition to remote work.",
+      "highlights": [],
+      "skills": ["Word", "Excel", "Outlook", "Teams", "Skype"],
+      "url": "https://www.ey.com",
+      "achievements": [
+        "Took part in pre-production UAT testing during the migration to Attendant Pro",
+        "Contributed to the transition to a fully remote switchboard"
+      ],
+      "responsibilities": [
+        "Management of a high-level corporate switchboard (EY France)",
+        "Proficiency with call management and customer relationship tools",
+        "Training of new switchboard operators and deputizing for the manager"
+      ]
+    },
+    {
+      "name": "Freelance",
+      "position": "Web Designer",
+      "location_type": "Remote",
+      "location": "France",
+      "startDate": "2013-01-01",
+      "endDate": "2015-01-01",
+      "summary": "Design of websites for craftsmen and e-commerce shops (including Eden Service Pro).",
+      "highlights": [],
+      "skills": ["WordPress", "PHP", "HTML", "CSS", "MySQL"],
+      "url": "",
+      "achievements": [],
+      "responsibilities": [
+        "Design of websites for craftsmen and e-commerce shops",
+        "Creation of graphic assets (banners, logos, icons)",
+        "HTML and CSS integration, first steps with JavaScript"
+      ]
+    },
+    {
+      "name": "Collège Paul Éluard",
+      "position": "Educational Assistant",
+      "location_type": "On-site",
+      "location": "Bonneuil-sur-Marne, Île-de-France, France",
+      "startDate": "2009-01-01",
+      "endDate": "2011-01-01",
+      "summary": "Student supervision and mentoring, homework help and management of relations with families.",
+      "highlights": [],
+      "skills": [],
+      "url": "",
+      "achievements": [],
+      "responsibilities": []
+    },
+    {
+      "name": "Comité de Construction Régional",
+      "position": "IT Technician",
+      "location_type": "Hybrid",
+      "location": "France",
+      "startDate": "2008-01-01",
+      "endDate": "2012-01-01",
+      "summary": "IT infrastructure maintenance and administration, with on-site and remote user support.",
+      "highlights": [],
+      "skills": ["Windows XP / 7", "Active Directory", "Network administration", "Backup & cloning", "Switches / Wi-Fi", "Antivirus"],
+      "url": "",
+      "achievements": [],
+      "responsibilities": [
+        "Workstation maintenance and administration (Windows XP/7, Active Directory, updates, backup, antivirus)",
+        "Installation and management of temporary networks on construction sites (switches, Wi-Fi, cabling, connection sharing)",
+        "Workstation cloning and deployment",
+        "On-site and remote user support (hotline and troubleshooting)"
+      ]
+    },
+    {
+      "name": "Netvibes",
+      "position": "Junior Web Designer",
+      "location_type": "On-site",
+      "location": "Paris, Île-de-France, France",
+      "startDate": "2006-01-01",
+      "endDate": "2008-01-01",
+      "summary": "Integration and graphic design for Netvibes Universes, in a startup environment on a platform with a worldwide audience (direct competitor of iGoogle).",
+      "highlights": [],
+      "skills": ["HTML", "CSS", "JavaScript", "Photoshop", "Subversion", "Netvibes widgets / API"],
+      "url": "",
+      "achievements": [
+        "Contributed to a world-scale web platform, direct competitor of iGoogle",
+        "Experience in a fast-growing startup environment"
+      ],
+      "responsibilities": [
+        "Development of Netvibes Universes (widget-based custom mini-sites)",
+        "HTML/CSS integration and creation of graphic assets (banners, icons)",
+        "Team collaboration on a large-scale project",
+        "Use of Subversion (version control) and macOS"
+      ]
+    },
+    {
+      "name": "Numericable",
+      "position": "UAT Technician",
+      "location_type": "On-site",
+      "location": "Champs-sur-Marne, Île-de-France, France",
+      "startDate": "2005-01-01",
+      "endDate": "2005-12-31",
+      "summary": "Testing and validation of information system updates in pre-production, notably the CRM managing TV/Internet offers.",
+      "highlights": [],
+      "skills": ["UAT / acceptance testing", "SQL", "Test plan writing"],
+      "url": "",
+      "achievements": [],
+      "responsibilities": [
+        "Testing and validation of IS updates in pre-production (CRM, TV/Internet offers)",
+        "Writing test plans and reporting bugs",
+        "Verification of new offers and features before release",
+        "Database queries (SQL) for data control"
+      ]
+    },
+    {
+      "name": "Ed L'épicier",
+      "position": "IT Technician",
+      "location_type": "On-site",
+      "location": "France",
+      "startDate": "2004-01-01",
+      "endDate": "2004-12-31",
+      "summary": "Migration and standardization of a fleet of around 80 workstations across the Paris and Marseille sites, and preparation of the Active Directory rollout.",
+      "highlights": [],
+      "skills": ["Windows 2000 Server", "Active Directory", "Networking / NetBIOS", "Workstation deployment", "User support"],
+      "url": "",
+      "achievements": [
+        "Migration and standardization of a fleet of about 80 workstations (Paris and Marseille)"
+      ],
+      "responsibilities": [
+        "Workstation migration to Windows 2000",
+        "Preparation of the Active Directory deployment plan",
+        "Standardization of workstations and servers (NetBIOS naming)",
+        "Rollout of updates and fleet maintenance",
+        "On-site work at the Marseille site to bring systems into compliance"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Comité de Construction Régional",
+      "position": "Volunteer",
+      "url": "",
+      "startDate": "2008-01-01",
+      "endDate": "2012-01-01",
+      "summary": "IT infrastructure management and maintenance"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Tech In France",
+      "area": "Application Developer, then Cybersecurity",
+      "studyType": "Professional training",
+      "startDate": "2025-07-01",
+      "endDate": null,
+      "url": ""
+    },
+    {
+      "institution": "IUT de Champs-sur-Marne",
+      "area": "Information and Communication Services & Technology",
+      "studyType": "Bachelor's degree",
+      "startDate": "2006-01-01",
+      "endDate": "2007-12-31",
+      "url": ""
+    },
+    {
+      "institution": "Lycée Polyvalent Louis Armand",
+      "area": "Business Computing",
+      "studyType": "Advanced Technician Diploma (BTS)",
+      "startDate": "2002-01-01",
+      "endDate": "2004-12-31",
+      "url": ""
+    },
+    {
+      "institution": "Lycée Polyvalent Christophe Colomb",
+      "area": "Economics and Social Sciences",
+      "studyType": "Baccalaureate",
+      "startDate": "2002-01-01",
+      "endDate": "2002-12-31",
+      "url": ""
+    }
+  ],
+  "certificates": [],
+  "skills": [
+    {
+      "name": "Web Development",
+      "level": "Advanced",
+      "keywords": ["HTML", "CSS", "JavaScript", "PHP"]
+    },
+    {
+      "name": "Front-end Frameworks",
+      "level": "Intermediate",
+      "keywords": ["Astro", "Nuxt", "Vue 3", "Svelte / SvelteKit", "Tailwind CSS", "TypeScript"]
+    },
+    {
+      "name": "Back-end & ORM",
+      "level": "Intermediate",
+      "keywords": ["Node.js", "Express", "Prisma", "Drizzle", "Supabase"]
+    },
+    {
+      "name": "DevOps & Deployment",
+      "level": "Intermediate",
+      "keywords": ["Git", "Docker", "VPS / Dokploy", "GitHub"]
+    },
+    {
+      "name": "Databases",
+      "level": "Intermediate",
+      "keywords": ["PostgreSQL", "SQLite", "MySQL", "SQL"]
+    },
+    {
+      "name": "Environments",
+      "level": "Advanced",
+      "keywords": ["VS Code", "Linux", "macOS"]
+    },
+    {
+      "name": "UI/UX & Design",
+      "level": "Intermediate",
+      "keywords": ["Photoshop", "Canva"]
+    },
+    {
+      "name": "AI & Productivity",
+      "level": "Intermediate",
+      "keywords": ["LLM / Prompting", "Gemini API", "GitHub Copilot", "Vibe coding", "Automation"]
+    },
+    {
+      "name": "Support & Administration",
+      "level": "Intermediate",
+      "keywords": ["User support", "Microsoft 365", "PC maintenance", "Network diagnostics"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "French",
+      "fluency": "Native"
+    },
+    {
+      "language": "English",
+      "fluency": "Fluent"
+    },
+    {
+      "language": "Malagasy",
+      "fluency": "Fluent"
+    },
+    {
+      "language": "Mauritian Creole",
+      "fluency": "Fluent"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Sports",
+      "keywords": ["Basketball"]
+    },
+    {
+      "name": "Ramen"
+    },
+    {
+      "name": "History"
+    }
+  ],
+  "references": [],
+  "projects": [
+    {
+      "name": "Portfolio & Interactive CV",
+      "isActive": true,
+      "description": "Interactive CV with color themes, dark mode and print optimization, deployed at nirina.rmnjs.org",
+      "highlights": [
+        "Astro · Tailwind CSS · TypeScript"
+      ],
+      "url": "https://nirina.rmnjs.org",
+      "github": ""
+    },
+    {
+      "name": "Katalog",
+      "isActive": false,
+      "description": "Equipment catalog with Excel import/export and image management. Most polished project, deployed in a private environment.",
+      "highlights": [
+        "Nuxt 3 · Vue 3 · Prisma · PostgreSQL · Tailwind CSS · TypeScript"
+      ],
+      "url": "",
+      "github": ""
+    },
+    {
+      "name": "Lemuel CRM",
+      "isActive": false,
+      "description": "Single-user B2B prospecting CRM.",
+      "highlights": [
+        "Node.js · Express · SQLite · Vue 3 · Gemini (AI)"
+      ],
+      "url": "",
+      "github": ""
+    },
+    {
+      "name": "FDHN",
+      "isActive": false,
+      "description": "Program management app to organize and plan a schedule, with PDF export.",
+      "highlights": [
+        "SvelteKit · Svelte 5 · Drizzle ORM · SQLite · Tailwind CSS · TypeScript"
+      ],
+      "url": "",
+      "github": ""
+    },
+    {
+      "name": "Kartara",
+      "isActive": false,
+      "description": "Interactive map to geolocate addresses with attached photos.",
+      "highlights": [
+        "HTML · JavaScript · Leaflet · Supabase"
+      ],
+      "url": "",
+      "github": ""
+    }
+  ]
+}

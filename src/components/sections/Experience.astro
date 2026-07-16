@@ -1,6 +1,7 @@
 ---
 import Section from "../Section.astro"
-import { work } from "@cv"
+import { getCV } from "@/i18n/cv"
+import { useTranslations } from "@/i18n/ui"
 
 import HTML from "@/icons/html.astro"
 import CSS from "@/icons/css.astro"
@@ -35,26 +36,29 @@ const SKILLS_ICONS: Record<string, any> = {
   Kotlin,
   Flutter,
 }
+
+const t = useTranslations(Astro.currentLocale)
+const { work } = getCV(Astro.currentLocale)
 ---
-<Section className={Astro.props.className} title="Expérience">
+<Section className={Astro.props.className} title={t("section.experience")}>
   <ul class="flex flex-col">
     {work.map(({ name, startDate, endDate, position, summary, responsibilities, achievements, url, skills, location, location_type }) => {
       const startYear = new Date(startDate).getFullYear()
-      const endYear = endDate != null ? new Date(endDate).getFullYear() : "Aujourd'hui"
+      const endYear = endDate != null ? new Date(endDate).getFullYear() : t("date.present")
 
       return (
         <li class="relative print:py-2">
-          <div class="group relative grid pb-1 print:pb-0 transition-all print:grid-cols-1 print:gap-1 sm:grid-cols-12 sm:gap-8 md:gap-6 lg:hover:!opacity-100 ">
+          <div class="group relative grid pb-1 print:pb-0 transition-all print:grid-cols-1 print:gap-1 sm:grid-cols-12 sm:gap-8 md:gap-6 lg:hover:opacity-100! ">
             <header class="relative mt-1 text-xs font-semibold sm:col-span-2">
               <time datetime={startDate} data-title={startDate}>{startYear}</time> - <time datetime={endDate} data-title={endDate}>{endYear}</time>
             </header>
-            <div class="relative flex flex-col pb-6 print:pb-0 before:-ml-6 sm:col-span-10 before:w-px print:before:hidden before:absolute before:bg-skin-muted before:h-full before:mt-2">
-            <div class="absolute w-2 h-2 bg-skin-muted rounded-full mt-2 -translate-x-[1.71rem] ring print:hidden ring-skin-fill"></div>
+            <div class="relative flex flex-col pb-6 print:pb-0 before:-ml-6 sm:col-span-10 before:w-px print:before:hidden before:absolute before:bg-skin-neutral before:h-full before:mt-2">
+            <div class="absolute w-2 h-2 bg-skin-neutral rounded-full mt-2 -translate-x-[1.71rem] ring-3 print:hidden ring-skin-fill"></div>
               <h3>
                 <div class="inline-flex items-center text-lg print:text-base leading-tight group/link focus-visible:text-amber-500" aria-label="{position} - {company}">
                   <span>{position} <span>@</span> 
                   {url ? (
-                    <a class="text-skin-hue" href={url} title={`Ver ${name}`} target="_blank">{name}</a>
+                    <a class="text-skin-hue" href={url} title={`${t("common.visit")} ${name}`} target="_blank">{name}</a>
                   ) : (
                     <span>{name}</span>
                   )}
@@ -76,7 +80,7 @@ const SKILLS_ICONS: Record<string, any> = {
               <div class="mt-4  print:gap-0 flex flex-col gap-4 print:text-xs text-sm" x-data="{ expanded: false }">
                 {summary && (
                   <div class="flex flex-col gap-1">
-                    <h4>Résumé :</h4>
+                    <h4>{t("experience.summary")}</h4>
                     <ul class="text-skin-muted [&>li]:ml-4 flex list-disc flex-col gap-2">
                       {Array.isArray(summary) ? (
                         summary.map(item => (
@@ -90,10 +94,10 @@ const SKILLS_ICONS: Record<string, any> = {
                 )}
 
                 {(responsibilities?.length > 0 || achievements?.length > 0) && (
-                <div class="print:!block md:after:from-skin-hue dark:md:after:to-skin-hue/0  flex relative flex-col max-sm:!h-auto print:!h-auto gap-4 print:gap-2 md:after:bg-gradient-to-t md:after:absolute md:after:bottom-0 md:after:w-full print:after:hidden md:after:h-12 md:after:content-[''] " :class="expanded ? 'after:hidden' : ''" x-show="expanded" x-collapse.min.50px>
+                <div class="print:block! md:after:from-skin-fill dark:md:after:to-skin-fill/0  flex relative flex-col max-sm:h-auto! print:h-auto! gap-4 print:gap-2 md:after:bg-linear-to-t md:after:absolute md:after:bottom-0 md:after:w-full print:after:hidden md:after:h-12 md:after:content-[''] " :class="expanded ? 'after:hidden' : ''" x-show="expanded" x-collapse.min.50px>
                 {responsibilities?.length > 0 && (
                   <div class="flex flex-col gap-1">
-                    <h4>Responsabilités :</h4>
+                    <h4>{t("experience.responsibilities")}</h4>
                     <ul class="text-skin-muted [&>li]:ml-4 flex list-disc flex-col gap-2">
                       {responsibilities.map((responsibility: string)=> (
                         <li>{responsibility}</li>
@@ -104,7 +108,7 @@ const SKILLS_ICONS: Record<string, any> = {
 
                 {achievements?.length > 0 && (
                   <div class="flex flex-col gap-1">
-                    <h4>Réalisations :</h4>
+                    <h4>{t("experience.achievements")}</h4>
                     <ul class="text-skin-muted [&>li]:ml-4 flex list-disc flex-col gap-2">
                       {achievements.map((achievement: string) => (
                         <li>{achievement}</li>
@@ -115,13 +119,13 @@ const SKILLS_ICONS: Record<string, any> = {
                 </div>
 
                 <button @click="expanded = ! expanded" class="print:hidden group/more w-fit cursor-pointer items-center justify-center gap-1.5 text-xs underline text-skin-muted transition-all hover:text-skin-base flex">
-                  <span x-text="expanded ? 'Voir moins' : 'Voir plus'">Voir plus</span>
+                  <span x-text={`expanded ? '${t("experience.seeLess")}' : '${t("experience.seeMore")}'`}>{t("experience.seeMore")}</span>
                   <svg class="w-4 h-4 group-hover/more:translate-y-0.5 duration-200 ease-out" :class="{ 'rotate-180': expanded }" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
                 </button>
                 )}
 
                 {skills?.length > 0 && (
-                <ul class="flex print:hidden flex-wrap gap-2" aria-label="Technologies used">
+                <ul class="flex print:hidden flex-wrap gap-2" aria-label={t("experience.technologies")}>
                   {skills.map(skill => {
                     const iconName = skill === "Next.js" ? "Next" : skill
                     const Icon = SKILLS_ICONS[iconName]
@@ -141,11 +145,10 @@ const SKILLS_ICONS: Record<string, any> = {
     })}
   </ul>  
 </Section>
-<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
 <style>
+  @reference "../../styles/global.css";
+
   li::marker {
-    @apply text-skin-hue
+    @apply text-skin-hue;
   }
 </style>

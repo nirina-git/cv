@@ -1,11 +1,20 @@
 import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
+import sitemap from "@astrojs/sitemap";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  site: 'https://cv.rmnjs.org',
+  site: 'https://nirina.rmnjs.org',
   base: '/',
   trailingSlash: 'always',
-  integrations: [
-    tailwind(),
-  ],
+  i18n: {
+    defaultLocale: 'fr',
+    locales: ['fr', 'en'],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
+  integrations: [sitemap()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });
