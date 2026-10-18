@@ -3,6 +3,14 @@ const { className, title } = Astro.props;
 ---
 
 <section class:list={["flex flex-col gap-4 print:gap-0", className]}>
-	{title && <h3 class="relative flex w-full items-center gap-3 pb-4 text-3xl print:gap-1 print:pb-0 print:text-xl">{title}</h3>}
+	{
+		title && (
+			<h3 class="relative flex w-full items-center gap-3 pb-4 text-3xl print:gap-1 print:pb-0 print:text-xl">
+				<span class="size-3 shrink-0 bg-skin-hue print:hidden" aria-hidden="true" />
+				{title}
+				<span class="h-0.5 flex-1 bg-[repeating-linear-gradient(90deg,rgb(var(--muted))_0_6px,transparent_6px_10px)] print:hidden" aria-hidden="true" />
+			</h3>
+		)
+	}
 	<slot />
 </section>

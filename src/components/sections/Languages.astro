@@ -29,11 +29,11 @@ const FLUENCY_LEVELS: Record<string, number> = {
 					<li class="flex flex-col gap-0.5 print:flex-row print:items-center print:justify-between">
 						<span class="text-sm font-medium">{language}</span>
 						<div class="flex items-center gap-2">
-							<div class="flex items-center gap-1 print:hidden">
+							<div class="flex items-center gap-0.5 print:hidden" aria-hidden="true">
 								{Array.from({ length: 5 }).map((_, i) => (
 									<span
 										class:list={[
-											"h-1.5 w-1.5 rounded-full",
+											"h-2 w-3",
 											i < level
 												? "bg-skin-hue"
 												: "bg-skin-neutral/30",

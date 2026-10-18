@@ -8,6 +8,7 @@ import X from "@/icons/X.astro";
 import LinkedIn from "@/icons/LinkedIn.astro";
 import GitHub from "@/icons/GitHub.astro";
 import WorldMap from "@/icons/WorldMap.astro";
+import Check from "pixelarticons/svg/check.svg";
 import type { SocialIcon } from "@/types";
 
 const t = useTranslations(Astro.currentLocale);
@@ -43,17 +44,14 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
 					email && (
 						<div x-data=`{ copyText: '${email}', copyNotification: false, copyToClipboard() { navigator.clipboard.writeText(this.copyText); this.copyNotification = true; let that = this; setTimeout(function(){ that.copyNotification = false; }, 3000); } }` class="relative flex items-center">
 							<div x-show="copyNotification" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-3" x-transition:enter-end="opacity-100 translate-x-0" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 translate-x-0" x-transition:leave-end="opacity-0 translate-y-2" style="display:none;" class="absolute left-0" x-cloak>
-								<div class="-mt-1.5 flex h-7 -translate-y-full items-center rounded-sm border-r border-green-500 bg-green-500 px-3 text-xs text-white">
-									<span class="text-white!">{t("hero.copied")}</span>
-									<div class="absolute left-0 bottom-0 inline-block h-full translate-x-full translate-y-5 overflow-hidden">
-										<div class="h-3 w-3 origin-center rotate-45 transform border border-transparent bg-green-500" />
-									</div>
+								<div class="pixel-border pixel-shadow -mt-2 flex h-7 -translate-y-full items-center whitespace-nowrap bg-skin-fill px-3 text-xs">
+									<span class="font-pixel text-skin-base!">{t("hero.copied")}</span>
 								</div>
 							</div>
-							<button @click="copyToClipboard();" class="group flex h-8 w-9 cursor-pointer items-center justify-center rounded-md text-skin-muted hover:bg-skin-button-accent hover:text-skin-inverted [&>span]:hover:text-skin-inverted">
-								<svg x-show="copyNotification" class="h-4 w-4 stroke-current text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" x-cloak>
-									<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-								</svg>
+							<button @click="copyToClipboard();" aria-label={t("hero.copyEmail")} class="group flex h-8 w-9 cursor-pointer items-center justify-center text-skin-muted hover:bg-skin-button-accent hover:text-skin-inverted [&>span]:hover:text-skin-inverted">
+								<span x-show="copyNotification" x-cloak>
+									<Check class="size-4 text-green-500" aria-hidden="true" />
+								</span>
 								<span x-show="!copyNotification">
 									<Mail />
 								</span>
@@ -79,7 +77,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
 						);
 					})
 				}
-				<div class="no-print footer-button max-sm:hidden group flex h-8 w-9 cursor-pointer items-center justify-center rounded-md text-skin-hue hover:bg-skin-button-accent hover:text-skin-inverted [&>span]:hover:text-skin-inverted">
+				<div class="no-print footer-button max-sm:hidden group flex h-8 w-9 cursor-pointer items-center justify-center text-skin-hue hover:bg-skin-button-accent hover:text-skin-inverted [&>span]:hover:text-skin-inverted">
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon h-6 w-6 icon-tabler icon-tabler-command"  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
 						<path d="M7 9a2 2 0 1 1 2 -2v10a2 2 0 1 1 -2 -2h10a2 2 0 1 1 -2 2v-10a2 2 0 1 1 2 2h-10"></path>
@@ -87,14 +85,18 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
 				</div>
 			</footer>
 		</div>
-		<figure class="print:hidden w-fit relative">
-			<img class="shadow-lg shadow-skin-hues" src={image} alt={name} />
-			<div class="pointer-events-none absolute -inset-2">
-				<div class="absolute -inset-y-8 right-0 w-px bg-skin-hue/50 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-				<div class="absolute -inset-y-8 left-0 w-px bg-skin-hue/50 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-				<div class="absolute -inset-x-8 bottom-0 h-px bg-skin-hue/50 [mask-image:linear-gradient(to_left,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-				<div class="absolute -inset-x-8 top-0 h-px bg-skin-hue/50 [mask-image:linear-gradient(to_left,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-			</div>
+		<figure class="crt pixel-border pixel-shadow print:hidden">
+			<!-- Isolent un canal R, V ou B : recombinés en « screen », ils redonnent l'image -->
+			<svg class="absolute size-0" aria-hidden="true">
+				<filter id="crt-r" color-interpolation-filters="sRGB"><feColorMatrix values="1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0" /></filter>
+				<filter id="crt-g" color-interpolation-filters="sRGB"><feColorMatrix values="0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0" /></filter>
+				<filter id="crt-b" color-interpolation-filters="sRGB"><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter>
+			</svg>
+			<img class="crt-img pixelated" src={image} alt={name} width="64" height="64" />
+			<img class="crt-split crt-split-r pixelated" src={image} alt="" aria-hidden="true" width="64" height="64" />
+			<img class="crt-split crt-split-b pixelated" src={image} alt="" aria-hidden="true" width="64" height="64" />
+			<img class="crt-slice pixelated" src={image} alt="" aria-hidden="true" width="64" height="64" />
+			<span class="crt-scanlines" style={`--avatar: url(${image})`} aria-hidden="true"></span>
 		</figure>
 	</div>
 </Section>
@@ -111,11 +113,107 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
 	}
 
 	h2 {
-		@apply text-balance text-base text-skin-muted print:text-lg;
+		@apply text-balance text-base font-normal text-skin-muted print:text-lg;
 	}
 
-	img {
-		@apply aspect-square w-32 rounded-2xl bg-cover;
+	/*
+	 * Avatar « écran CRT » : image pixel 64px affichée en 128px (×2, sans lissage),
+	 * lignes de balayage permanentes et salves de glitch (décalage RGB + bande
+	 * déplacée) toutes les 4 s. Désactivé si prefers-reduced-motion.
+	 */
+	.crt {
+		@apply relative isolate w-fit p-2;
+		/* Écran sombre dans les deux thèmes : l'avatar ressort comme sur un moniteur */
+		background: rgb(13, 17, 31);
+		--glitch: 4s;
+	}
+
+	.crt img,
+	.crt span {
+		@apply block size-32;
+	}
+
+	.crt-split,
+	.crt-slice,
+	.crt-scanlines {
+		@apply pointer-events-none absolute top-2 left-2;
+	}
+
+	/* Canaux rouge et bleu, décalés pendant les salves (le vert reste sur .crt-img) */
+	.crt-split {
+		mix-blend-mode: screen;
+		opacity: 0;
+		animation: crt-split-r var(--glitch) steps(1, end) infinite;
+	}
+
+	.crt-split-r {
+		filter: url(#crt-r);
+	}
+
+	.crt-split-b {
+		filter: url(#crt-b);
+		animation-name: crt-split-b;
+	}
+
+	/* Bande horizontale de l'image qui « saute » */
+	.crt-slice {
+		opacity: 0;
+		animation: crt-slice var(--glitch) steps(1, end) infinite;
+	}
+
+	.crt-img {
+		animation: crt-jitter var(--glitch) steps(1, end) infinite;
+	}
+
+	/* Une ligne sombre toutes les 2 rangées de pixels, limitée au disque de l'avatar */
+	.crt-scanlines {
+		background: repeating-linear-gradient(to bottom, transparent 0 3px, rgb(0 0 0 / 0.22) 3px 4px);
+		mask: var(--avatar) center / contain no-repeat;
+	}
+
+	/* Pendant une salve, l'image principale ne garde que le canal vert */
+	@keyframes crt-jitter {
+		0%, 78% { translate: 0; filter: none; }
+		80% { translate: -4px 0; filter: url(#crt-g); }
+		82% { translate: 2px 0; filter: url(#crt-g); }
+		84% { translate: 0; filter: none; }
+		88% { translate: 4px 0; filter: url(#crt-g); }
+		90%, 100% { translate: 0; filter: none; }
+	}
+
+	@keyframes crt-split-r {
+		0%, 78% { opacity: 0; translate: 0; }
+		80% { opacity: 1; translate: -10px 0; }
+		82% { opacity: 1; translate: -2px 0; }
+		84% { opacity: 0; }
+		88% { opacity: 1; translate: -2px 0; }
+		90%, 100% { opacity: 0; translate: 0; }
+	}
+
+	@keyframes crt-split-b {
+		0%, 78% { opacity: 0; translate: 0; }
+		80% { opacity: 1; translate: 2px 0; }
+		82% { opacity: 1; translate: 6px 0; }
+		84% { opacity: 0; }
+		88% { opacity: 1; translate: 10px 0; }
+		90%, 100% { opacity: 0; translate: 0; }
+	}
+
+	@keyframes crt-slice {
+		0%, 78% { opacity: 0; translate: 0; clip-path: inset(0 0 100% 0); }
+		80% { opacity: 1; translate: 8px 0; clip-path: inset(22% 0 64% 0); }
+		82% { opacity: 1; translate: -6px 0; clip-path: inset(56% 0 30% 0); }
+		84% { opacity: 0; }
+		88% { opacity: 1; translate: 6px 0; clip-path: inset(70% 0 18% 0); }
+		90%, 100% { opacity: 0; translate: 0; clip-path: inset(0 0 100% 0); }
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.crt-img,
+		.crt-split,
+		.crt-slice {
+			animation: none;
+		}
 	}
 
 	span {
@@ -127,7 +225,13 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
 	}
 
 	footer a, footer button {
-		@apply inline-flex size-8 items-center justify-center rounded-md p-1 transition-all duration-500 ease-linear text-skin-hue hover:bg-skin-button-accent hover:text-skin-inverted;
+		@apply pixel-btn inline-flex size-8 items-center justify-center p-1 text-skin-hue hover:bg-skin-button-accent hover:text-skin-inverted;
+	}
+
+	/* Les icônes du bouton e-mail sont dans des <span> : elles suivent la couleur
+	   du bouton (sinon text-skin-hue de la règle span les rend invisibles au survol) */
+	footer button span {
+		color: inherit;
 	}
 
 	@media (width <= 700px) {

@@ -2,12 +2,11 @@
   "basics": {
     "name": "Nirina Ramamonjisoa",
     "label": "Développeur Web & Support IT | Profil Hybride | Télétravail France & Île Maurice",
-    "image": "/me_avatar.jpg",
+    "image": "/me_avatar_pixel.png",
     "email": "nirina@rmnjs.org",
     "phone": "+33 6 29 61 01 26",
     "url": "",
     "summary": "Profil hybride développement web et support IT, avec plus de 15 ans d'expérience dans des environnements techniques variés. Autonome sur la création d'applications et sites web (Astro, Nuxt, Tailwind CSS) et la gestion de projets de A à Z : base de données PostgreSQL, hébergement sur VPS Linux, déploiement via Docker et Dokploy, versioning Git. Solide expérience en support utilisateur, administration système et migration d'outils. Utilisation régulière des outils d'IA pour le développement, l'automatisation et la veille technologique. Disponible en télétravail depuis la France ou l'Île Maurice.",
-    "theme": "blue",
     "location": {
       "address": "",
       "postalCode": "",

@@ -4,11 +4,27 @@
  */
 @layer reset;
 @import "hotkeypad/reset.css" layer(reset);
+@import "@fontsource/pixelify-sans/400.css";
+@import "@fontsource/pixelify-sans/600.css";
+@import "@fontsource/pixelify-sans/700.css";
+@import "@fontsource/jetbrains-mono/400.css";
+@import "@fontsource/jetbrains-mono/700.css";
 @import "tailwindcss";
 @import "./themes.css";
+@import "./pixel.css";
 
 /* Le mode sombre est piloté par la classe .dark sur <html> (ThemeSwitch). */
 @custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * Typo rétro : police pixel pour les titres et l'interface (font-pixel),
+ * monospace lisible pour le texte courant (police par défaut).
+ */
+@theme {
+  --font-pixel: "Pixelify Sans", ui-monospace, monospace;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --default-font-family: var(--font-mono);
+}
 
 /*
  * Couleurs "skin" : chaque utilitaire (text-skin-*, bg-skin-*, …) référence
@@ -25,4 +41,5 @@
   --color-skin-button-accent: rgb(var(--color-button-accent));
   --color-skin-button-accent-hover: rgb(var(--color-button-accent-hover));
   --color-skin-button-muted: rgb(var(--color-button-muted));
+  --color-skin-shadow: rgb(var(--color-shadow));
 }

@@ -2,12 +2,11 @@
   "basics": {
     "name": "Nirina Ramamonjisoa",
     "label": "Web Developer & IT Support | Hybrid Profile | Remote from France & Mauritius",
-    "image": "/me_avatar.jpg",
+    "image": "/me_avatar_pixel.png",
     "email": "nirina@rmnjs.org",
     "phone": "+33 6 29 61 01 26",
     "url": "",
     "summary": "Hybrid web development and IT support profile, with over 15 years of experience across varied technical environments. Autonomous in building web applications and websites (Astro, Nuxt, Tailwind CSS) and managing projects end to end: PostgreSQL databases, hosting on Linux VPS, deployment with Docker and Dokploy, Git versioning. Solid experience in user support, system administration and tool migrations. Regular use of AI tools for development, automation and technology watch. Available for remote work from France or Mauritius.",
-    "theme": "blue",
     "location": {
       "address": "",
       "postalCode": "",

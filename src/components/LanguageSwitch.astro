@@ -9,7 +9,7 @@ const links = [
 ] as const;
 ---
 
-<nav aria-label="Langue / Language" class="flex items-center gap-1 rounded-md text-sm font-medium">
+<nav aria-label="Langue / Language" class="flex items-center gap-1 font-pixel text-sm">
 	{
 		links.map(({ code, label, href, title }) => (
 			<a
@@ -17,9 +17,9 @@ const links = [
 				title={title}
 				aria-current={code === current ? "page" : undefined}
 				class:list={[
-					"rounded-md px-2 py-1 transition-colors",
+					"px-2 py-1",
 					code === current
-						? "bg-skin-button-accent text-skin-inverted"
+						? "pixel-border pixel-border-hue bg-skin-button-accent text-skin-inverted"
 						: "text-skin-muted hover:bg-skin-button-muted hover:text-skin-base",
 				]}
 			>
