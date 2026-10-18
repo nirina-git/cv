@@ -1,0 +1,80 @@
+/*
+ * Utilitaires « pixel art » (Tailwind v4 @utility).
+ *
+ * pixel-border : bordure dessinée en box-shadow à l'extérieur de la boîte,
+ *   coins laissés vides pour l'effet « escalier » des UI 8-bit.
+ *   Épaisseur : --pixel (2px par défaut), couleur : --pixel-border-color
+ *   (raccourcis pixel-border-hue / pixel-border-muted).
+ * pixel-shadow : ombre portée dure (sans flou), cumulable avec pixel-border.
+ * pixel-btn    : survol qui « soulève », clic qui « enfonce » (avec pixel-shadow).
+ */
+
+/* Non hérités : un élément encadré ne doit pas transmettre son cadre à ses enfants */
+@property --pixel-outline {
+  syntax: "*";
+  inherits: false;
+}
+@property --pixel-drop {
+  syntax: "*";
+  inherits: false;
+}
+@property --pixel-border-color {
+  syntax: "*";
+  inherits: false;
+}
+
+@utility pixel-border {
+  --pixel-outline:
+    0 calc(-1 * var(--pixel, 2px)) 0 0 var(--pixel-border-color, rgba(var(--color-text-base), 0.8)),
+    0 var(--pixel, 2px) 0 0 var(--pixel-border-color, rgba(var(--color-text-base), 0.8)),
+    calc(-1 * var(--pixel, 2px)) 0 0 0 var(--pixel-border-color, rgba(var(--color-text-base), 0.8)),
+    var(--pixel, 2px) 0 0 0 var(--pixel-border-color, rgba(var(--color-text-base), 0.8));
+  box-shadow: var(--pixel-outline), var(--pixel-drop, 0 0 #0000);
+  border-radius: 0;
+}
+
+@utility pixel-border-hue {
+  --pixel-border-color: rgb(var(--color));
+}
+
+@utility pixel-border-muted {
+  --pixel-border-color: rgb(var(--muted));
+}
+
+@utility pixel-shadow {
+  --pixel-drop: calc(var(--pixel, 2px) * 3) calc(var(--pixel, 2px) * 3) 0 0 rgba(var(--color-shadow), 0.9);
+  box-shadow: var(--pixel-outline, 0 0 #0000), var(--pixel-drop);
+}
+
+@utility pixel-btn {
+  cursor: pointer;
+  transition:
+    translate 80ms steps(2),
+    box-shadow 80ms steps(2);
+
+  &:hover {
+    translate: -1px -1px;
+  }
+
+  &:active {
+    translate: calc(var(--pixel, 2px) * 2) calc(var(--pixel, 2px) * 2);
+    --pixel-drop: 0 0 #0000;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+/* Fond de page : trame de « pixels » 2×2 aux nœuds d'une grille de 24px */
+@utility pixel-grid-bg {
+  background-color: rgba(var(--muted), 0.5);
+  mask-image: linear-gradient(90deg, #000 2px, transparent 2px), linear-gradient(#000 2px, transparent 2px);
+  mask-size: 24px 24px;
+  mask-composite: intersect;
+}
+
+/* Images en pixel art : agrandissement sans lissage */
+@utility pixelated {
+  image-rendering: pixelated;
+}
