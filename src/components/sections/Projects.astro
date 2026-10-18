@@ -58,7 +58,7 @@ const { projects } = getCV(Astro.currentLocale);
 	@reference "../../styles/global.css";
 
 	ul {
-		@apply ml-4 list-disc space-y-1;
+		@apply ml-4 list-[square] space-y-1 print:list-disc;
 		li {
 			@apply text-skin-muted;
 		}
