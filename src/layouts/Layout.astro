@@ -143,6 +143,11 @@ const alternates = [
 				display: none !important;
 			}
 
+			/* Masqué jusqu'à l'initialisation d'Alpine (ex. coche « copié » du bouton e-mail) */
+			[x-cloak] {
+				display: none !important;
+			}
+
 			.dev * {
 				@apply border border-red-500/50 bg-red-500/5;
 			}
