@@ -27,7 +27,7 @@ npm run dev       # http://localhost:4321
 
 Tout le contenu du CV (expériences, compétences, projets…) se modifie dans `cv.json`.
 
-Le thème de couleurs se choisit via `basics.theme` dans `cv.json` (`default`, `blue`, `red`, `green`, `cyber`), avec variantes dark automatiques. Les thèmes sont définis dans les feuilles de style du projet.
+Le style est rétro pixel : un thème unique (variante claire « papier » et sombre « écran CRT ») défini dans `src/styles/themes.css`, et les utilitaires pixel (bordures, ombres, glitch) dans `src/styles/pixel.css`. L'impression reste sobre (polices système, palette neutre).
 
 ## Déploiement
 
