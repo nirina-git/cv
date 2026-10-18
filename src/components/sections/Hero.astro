@@ -228,6 +228,12 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
 		@apply pixel-btn inline-flex size-8 items-center justify-center p-1 text-skin-hue hover:bg-skin-button-accent hover:text-skin-inverted;
 	}
 
+	/* Les icônes du bouton e-mail sont dans des <span> : elles suivent la couleur
+	   du bouton (sinon text-skin-hue de la règle span les rend invisibles au survol) */
+	footer button span {
+		color: inherit;
+	}
+
 	@media (width <= 700px) {
 		.container {
 			flex-direction: column-reverse;
