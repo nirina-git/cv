@@ -87,14 +87,18 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
 				</div>
 			</footer>
 		</div>
-		<figure class="print:hidden w-fit relative">
-			<img class="shadow-lg shadow-skin-hues" src={image} alt={name} />
-			<div class="pointer-events-none absolute -inset-2">
-				<div class="absolute -inset-y-8 right-0 w-px bg-skin-hue/50 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-				<div class="absolute -inset-y-8 left-0 w-px bg-skin-hue/50 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-				<div class="absolute -inset-x-8 bottom-0 h-px bg-skin-hue/50 [mask-image:linear-gradient(to_left,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-				<div class="absolute -inset-x-8 top-0 h-px bg-skin-hue/50 [mask-image:linear-gradient(to_left,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-			</div>
+		<figure class="crt pixel-border pixel-shadow print:hidden">
+			<!-- Isolent un canal R, V ou B : recombinés en « screen », ils redonnent l'image -->
+			<svg class="absolute size-0" aria-hidden="true">
+				<filter id="crt-r" color-interpolation-filters="sRGB"><feColorMatrix values="1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0" /></filter>
+				<filter id="crt-g" color-interpolation-filters="sRGB"><feColorMatrix values="0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0" /></filter>
+				<filter id="crt-b" color-interpolation-filters="sRGB"><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter>
+			</svg>
+			<img class="crt-img pixelated" src={image} alt={name} width="64" height="64" />
+			<img class="crt-split crt-split-r pixelated" src={image} alt="" aria-hidden="true" width="64" height="64" />
+			<img class="crt-split crt-split-b pixelated" src={image} alt="" aria-hidden="true" width="64" height="64" />
+			<img class="crt-slice pixelated" src={image} alt="" aria-hidden="true" width="64" height="64" />
+			<span class="crt-scanlines" style={`--avatar: url(${image})`} aria-hidden="true"></span>
 		</figure>
 	</div>
 </Section>
@@ -114,8 +118,104 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
 		@apply text-balance text-base text-skin-muted print:text-lg;
 	}
 
-	img {
-		@apply aspect-square w-32 rounded-2xl bg-cover;
+	/*
+	 * Avatar « écran CRT » : image pixel 64px affichée en 128px (×2, sans lissage),
+	 * lignes de balayage permanentes et salves de glitch (décalage RGB + bande
+	 * déplacée) toutes les 4 s. Désactivé si prefers-reduced-motion.
+	 */
+	.crt {
+		@apply relative isolate w-fit p-2;
+		/* Écran sombre dans les deux thèmes : l'avatar ressort comme sur un moniteur */
+		background: rgb(13, 17, 31);
+		--glitch: 4s;
+	}
+
+	.crt img,
+	.crt span {
+		@apply block size-32;
+	}
+
+	.crt-split,
+	.crt-slice,
+	.crt-scanlines {
+		@apply pointer-events-none absolute top-2 left-2;
+	}
+
+	/* Canaux rouge et bleu, décalés pendant les salves (le vert reste sur .crt-img) */
+	.crt-split {
+		mix-blend-mode: screen;
+		opacity: 0;
+		animation: crt-split-r var(--glitch) steps(1, end) infinite;
+	}
+
+	.crt-split-r {
+		filter: url(#crt-r);
+	}
+
+	.crt-split-b {
+		filter: url(#crt-b);
+		animation-name: crt-split-b;
+	}
+
+	/* Bande horizontale de l'image qui « saute » */
+	.crt-slice {
+		opacity: 0;
+		animation: crt-slice var(--glitch) steps(1, end) infinite;
+	}
+
+	.crt-img {
+		animation: crt-jitter var(--glitch) steps(1, end) infinite;
+	}
+
+	/* Une ligne sombre toutes les 2 rangées de pixels, limitée au disque de l'avatar */
+	.crt-scanlines {
+		background: repeating-linear-gradient(to bottom, transparent 0 3px, rgb(0 0 0 / 0.22) 3px 4px);
+		mask: var(--avatar) center / contain no-repeat;
+	}
+
+	/* Pendant une salve, l'image principale ne garde que le canal vert */
+	@keyframes crt-jitter {
+		0%, 78% { translate: 0; filter: none; }
+		80% { translate: -4px 0; filter: url(#crt-g); }
+		82% { translate: 2px 0; filter: url(#crt-g); }
+		84% { translate: 0; filter: none; }
+		88% { translate: 4px 0; filter: url(#crt-g); }
+		90%, 100% { translate: 0; filter: none; }
+	}
+
+	@keyframes crt-split-r {
+		0%, 78% { opacity: 0; translate: 0; }
+		80% { opacity: 1; translate: -10px 0; }
+		82% { opacity: 1; translate: -2px 0; }
+		84% { opacity: 0; }
+		88% { opacity: 1; translate: -2px 0; }
+		90%, 100% { opacity: 0; translate: 0; }
+	}
+
+	@keyframes crt-split-b {
+		0%, 78% { opacity: 0; translate: 0; }
+		80% { opacity: 1; translate: 2px 0; }
+		82% { opacity: 1; translate: 6px 0; }
+		84% { opacity: 0; }
+		88% { opacity: 1; translate: 10px 0; }
+		90%, 100% { opacity: 0; translate: 0; }
+	}
+
+	@keyframes crt-slice {
+		0%, 78% { opacity: 0; translate: 0; clip-path: inset(0 0 100% 0); }
+		80% { opacity: 1; translate: 8px 0; clip-path: inset(22% 0 64% 0); }
+		82% { opacity: 1; translate: -6px 0; clip-path: inset(56% 0 30% 0); }
+		84% { opacity: 0; }
+		88% { opacity: 1; translate: 6px 0; clip-path: inset(70% 0 18% 0); }
+		90%, 100% { opacity: 0; translate: 0; clip-path: inset(0 0 100% 0); }
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.crt-img,
+		.crt-split,
+		.crt-slice {
+			animation: none;
+		}
 	}
 
 	span {

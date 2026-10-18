@@ -109,6 +109,11 @@ const alternates = [
 					font-weight: 600;
 				}
 
+				/* La ligature « fi » de Pixelify Sans ressemble à un « A » */
+				:where(h1, h2, h3, h4, .font-pixel) {
+					font-variant-ligatures: none;
+				}
+
 				@media print {
 					/* Impression sobre : polices système, pas de typo pixel */
 					body,

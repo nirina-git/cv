@@ -27,7 +27,7 @@ npm run dev       # http://localhost:4321
 
 Tout le contenu du CV (expériences, compétences, projets…) se modifie dans `cv.json`.
 
-Le style est rétro pixel : un thème unique (variante claire « papier » et sombre « écran CRT ») défini dans `src/styles/themes.css`, et les utilitaires pixel (bordures, ombres, glitch) dans `src/styles/pixel.css`. L'impression reste sobre (polices système, palette neutre).
+Le style est rétro pixel : un thème unique (variante claire « papier » et sombre « écran CRT ») défini dans `src/styles/themes.css`, et les utilitaires pixel (bordures, ombres, grille) dans `src/styles/pixel.css`. L'impression reste sobre (polices système, palette neutre).
 
 ## Déploiement
 

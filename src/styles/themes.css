@@ -16,10 +16,8 @@
   --color-button-accent: 0, 100, 126;
   --color-button-accent-hover: 176, 28, 128;
   --color-button-muted: 228, 223, 207;
-  /* Ombres pixel (dures, sans flou) et canaux du glitch RGB */
+  /* Ombres pixel (dures, sans flou) */
   --color-shadow: 22, 27, 51;
-  --color-glitch-a: 255, 0, 170;
-  --color-glitch-b: 0, 220, 255;
 }
 
 .dark {
@@ -33,8 +31,6 @@
   --color-button-accent-hover: 255, 92, 214;
   --color-button-muted: 27, 34, 58;
   --color-shadow: 0, 0, 0;
-  --color-glitch-a: 255, 92, 214;
-  --color-glitch-b: 64, 224, 238;
 }
 
 /*
