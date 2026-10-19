@@ -49,14 +49,14 @@ const SKILLS_ICONS: Record<string, any> = {
 		{
 			skills.map(({ name, keywords }) => (
 				<div class="flex flex-col gap-2">
-					<h4 class="text-sm text-skin-hue">
+					<h4 class="classic:text-xs classic:font-semibold classic:uppercase classic:tracking-wider classic:text-skin-hue/80 retro:text-sm retro:text-skin-hue">
 						{name}
 					</h4>
 					<ul class="inline-flex flex-wrap gap-2">
 						{keywords?.map((keyword: string) => {
 							const Icon = SKILLS_ICONS[keyword];
 							return (
-								<li class="pixel-border pixel-border-muted flex items-center gap-1 bg-skin-button-muted px-2 py-0.5 text-xs text-skin-muted print:bg-transparent print:p-0 print:text-zinc-800 print:shadow-none">
+								<li class="flex items-center gap-1 px-2 py-0.5 text-xs text-skin-muted print:p-0 print:text-zinc-800 classic:rounded-md classic:border classic:border-skin-hue/20 classic:bg-skin-button-accent/10 classic:print:border-none classic:print:bg-transparent retro:pixel-border retro:pixel-border-muted retro:bg-skin-button-muted retro:print:bg-transparent retro:print:shadow-none">
 									{Icon && <Icon class="size-3.5 text-skin-hue" />}
 									<span>{keyword}</span>
 								</li>

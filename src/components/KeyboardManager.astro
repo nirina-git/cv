@@ -162,10 +162,7 @@ const profilesInfo = profiles.map(({ network, url }) => {
 		}
 
 		.footer-button {
-			@apply pixel-border pixel-shadow pixel-btn bg-skin-fill text-skin-hue;
 			position: fixed;
-			right: 14px;
-			bottom: 14px;
 			width: 50px;
 			height: 50px;
 			display: flex;
@@ -173,10 +170,25 @@ const profilesInfo = profiles.map(({ network, url }) => {
 			justify-content: center;
 			cursor: pointer;
 		}
+
+		:global([data-theme="classic"]) .footer-button {
+			background: #fff;
+			color: #777;
+			border: 1px solid #eee;
+			right: 10px;
+			bottom: 10px;
+			border-radius: 50%;
+		}
+
+		:global([data-theme="retro"]) .footer-button {
+			@apply pixel-border pixel-shadow pixel-btn bg-skin-fill text-skin-hue;
+			right: 14px;
+			bottom: 14px;
+		}
 	}
 
 	footer {
-		@apply bg-skin-button-accent font-pixel text-skin-inverted;
+		@apply bg-skin-button-accent retro:font-display retro:text-skin-inverted;
 		position: fixed;
 		bottom: 0px;
 		width: 100%;
@@ -192,10 +204,16 @@ const profilesInfo = profiles.map(({ network, url }) => {
 		animation-range: entry 100% cover 10%;
 	}
 	kbd {
+		@apply bg-skin-neutral;
+		border-radius: 4px;
+		padding: 2px 4px;
+		font-size: 12px;
+	}
+
+	:global([data-theme="retro"]) kbd {
 		@apply pixel-border bg-skin-fill text-skin-base;
 		margin-inline: 4px;
 		padding: 0 6px;
-		font-size: 12px;
 	}
 	#hotkeypad {
 		--hotkeypad-bg-kbd: rgb(var(--muted));
@@ -205,22 +223,25 @@ const profilesInfo = profiles.map(({ network, url }) => {
 		--hotkeypad-border-container: rgb(var(--muted));
 		--hotkeypad-border-container-hover: rgb(var(--color-fill));
 		--hotkeypad-fg-muted: rgb(var(--color-text-muted));
+	}
+
+	:global([data-theme="retro"]) #hotkeypad {
 		--hotkeypad-font-mono: var(--font-mono);
 	}
 
 	/* Palette Cmd+K en fenêtre de dialogue rétro (DOM créé par hotkeypad, hors scope Astro) */
-	:global(#hotkeypad [data-container]) {
+	:global([data-theme="retro"] #hotkeypad [data-container]) {
 		@apply pixel-border pixel-shadow;
 		--pixel: 3px;
 		border: none;
 		filter: none;
 	}
 
-	:global(#hotkeypad [data-container] header span),
-	:global(#hotkeypad [data-hotkey]),
-	:global(#hotkeypad [data-hotkey]::before),
-	:global(#hotkeypad [data-hotkey] div span),
-	:global(#hotkeypad [data-container] footer kbd) {
+	:global([data-theme="retro"] #hotkeypad [data-container] header span),
+	:global([data-theme="retro"] #hotkeypad [data-hotkey]),
+	:global([data-theme="retro"] #hotkeypad [data-hotkey]::before),
+	:global([data-theme="retro"] #hotkeypad [data-hotkey] div span),
+	:global([data-theme="retro"] #hotkeypad [data-container] footer kbd) {
 		border-radius: 0;
 	}
 

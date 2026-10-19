@@ -15,10 +15,13 @@ const { projects } = getCV(Astro.currentLocale);
 		{
 			projects.map(({ url, description, highlights, name, isActive, github }) => {
 				return (
-					<div role="contentinfo" class="grid-span-1 pixel-border pixel-shadow relative flex flex-col bg-skin-button-muted p-5 print:shadow-none">
+					<div role="contentinfo" class="grid-span-1 relative flex flex-col p-5 classic:ring-skin-neutral classic:rounded-md classic:bg-skin-button-muted/50 classic:shadow-xs classic:ring-1 retro:pixel-border retro:pixel-shadow retro:bg-skin-button-muted retro:print:shadow-none">
 						<div class="flex items-center justify-between space-x-[10px]">
 							<div class="flex items-center gap-2">
-								<Folder class="size-4 shrink-0 text-skin-hue" aria-hidden="true" />
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder size-4 retro:hidden!">
+									<path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z" />
+								</svg>
+								<Folder class="size-4 shrink-0 text-skin-hue classic:hidden!" aria-hidden="true" />
 								<div class="flex items-center gap-[6px]">
 									{isActive ? (
 										<a class="hover:text-skin-hue group flex items-center gap-[6px] text-lg decoration-dotted underline-offset-[5px] hover:underline" href={url} title={`${t("common.visit")} ${name}`} target="_blank">
@@ -57,7 +60,7 @@ const { projects } = getCV(Astro.currentLocale);
 	@reference "../../styles/global.css";
 
 	ul {
-		@apply ml-4 list-[square] space-y-1 print:list-disc;
+		@apply ml-4 list-disc space-y-1 retro:not-print:list-[square];
 		li {
 			@apply text-skin-muted;
 		}
