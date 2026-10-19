@@ -199,7 +199,11 @@ const profilesInfo = profiles.map(({ network, url }) => {
 		view-timeline-name: --revealing;
 		view-timeline-axis: block;
 
-		animation: linear 0.3s fadeIn;
+		/* Propriétés détaillées : le minifieur d'Astro 7 replie sinon animation-timeline
+		   dans le raccourci « animation », ce qui invalide l'animation au défilement */
+		animation-name: fadeIn;
+		animation-duration: 0.3s;
+		animation-timing-function: linear;
 		animation-timeline: --revealing;
 		animation-range: entry 100% cover 10%;
 	}
