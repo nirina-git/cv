@@ -72,7 +72,14 @@ const profilesInfo = profiles.map(({ network, url }) => {
 	</svg>
 </div>
 
-<div id="hotkeypad" data-placeholder={t("palette.placeholder")} data-print-title={t("palette.print")} data-info={JSON.stringify(profilesInfo)}></div>
+<div
+	id="hotkeypad"
+	data-placeholder={t("palette.placeholder")}
+	data-print-title={t("palette.print")}
+	data-info={JSON.stringify(profilesInfo)}
+	data-labels={JSON.stringify({ empty: t("palette.empty"), select: t("palette.select"), navigate: t("palette.navigate"), close: t("palette.close"), escape: t("palette.escape") })}
+>
+</div>
 
 <script>
 	interface Info {
@@ -87,7 +94,23 @@ const profilesInfo = profiles.map(({ network, url }) => {
 
 	import HotKeyPad from "hotkeypad";
 
-	const hotkeypad = new HotKeyPad();
+	const labels = JSON.parse(document.getElementById("hotkeypad")?.dataset.labels ?? "{}");
+
+	// Pied de palette traduit : hotkeypad clone le contenu de <template id="hotkeypad-footer">.
+	// Construit en JS (et non dans le markup Astro) pour échapper aux styles scopés du composant.
+	const footer = document.createElement("template");
+	footer.id = "hotkeypad-footer";
+	const activation = navigator.userAgent.includes("Macintosh") ? "Cmd" : "Ctrl";
+	const kbd = (text: string) => Object.assign(document.createElement("kbd"), { textContent: text });
+	const line = (keys: string[], text: string) => {
+		const p = document.createElement("p");
+		p.append(...keys.map(kbd), ` ${text}`);
+		return p;
+	};
+	footer.content.append(line(["↩"], labels.select), line(["↑", "↓"], labels.navigate), line([`${activation} + K`, labels.escape], labels.close));
+	document.body.append(footer);
+
+	const hotkeypad = new HotKeyPad({ emptyMessage: labels.empty });
 	const info = hotkeypad.instance.getAttribute("data-info") ?? "[]";
 	const printTitle = hotkeypad.instance.getAttribute("data-print-title") ?? "Print resume";
 	const parsedInfo = JSON.parse(info) as Info[];

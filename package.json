@@ -18,16 +18,17 @@
     "@tailwindcss/vite": "^4.3.3",
     "alpinejs": "^3.15.12",
     "astro": "^7.4.0",
-    "hotkeypad": "0.1.0",
+    "hotkeypad": "1.0.2",
     "pixelarticons": "^2.4.2",
     "tailwindcss": "^4.3.3",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
     "@types/alpinejs": "^3.13.11",
+    "esbuild": "^0.28.2",
     "prettier": "^3.3.2",
-    "prettier-plugin-astro": "^0.14.0",
-    "prettier-plugin-tailwindcss": "^0.6.5"
+    "prettier-plugin-astro": "^1.1.1",
+    "prettier-plugin-tailwindcss": "^0.8.1"
   },
   "engines": {
     "node": ">=22.22.0"

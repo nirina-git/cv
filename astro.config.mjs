@@ -19,5 +19,9 @@ export default defineConfig({
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
+    // Minifieur CSS d'Astro 4/5 : celui de Vite 8 (Lightning CSS) supprime des
+    // déclarations de repli (ex. width: fit-content suivi de -moz-fit-content
+    // dans hotkeypad) et casse la mise en page de la palette Cmd+K.
+    build: { cssMinify: 'esbuild' },
   },
 });

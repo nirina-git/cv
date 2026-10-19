@@ -3,7 +3,9 @@
  * plus basse : non-layerisé, il écraserait toutes les utilities Tailwind v4.
  */
 @layer reset;
-@import "hotkeypad/reset.css" layer(reset);
+/* Chemin direct : l'export « ./*.css » de hotkeypad n'a pas de condition « style »,
+   que prettier-plugin-tailwindcss exige pour résoudre l'import */
+@import "../../node_modules/hotkeypad/dist/styles/reset.css" layer(reset);
 @import "@fontsource/pixelify-sans/400.css";
 @import "@fontsource/pixelify-sans/600.css";
 @import "@fontsource/pixelify-sans/700.css";
