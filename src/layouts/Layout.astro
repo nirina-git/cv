@@ -2,6 +2,7 @@
 import "@/styles/global.css";
 import Vengeance from "@/layouts/Vengeance.astro";
 import { getCV, toLocale } from "@/i18n/cv";
+import { DEFAULT_THEME, STORAGE_KEYS, THEMES } from "@/themes";
 
 interface Props {
 	title: string;
@@ -10,7 +11,7 @@ interface Props {
 const { title } = Astro.props;
 
 const locale = toLocale(Astro.currentLocale);
-const { image, summary } = getCV(locale).basics;
+const { summary } = getCV(locale).basics;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL("og.png", Astro.site);
@@ -24,19 +25,39 @@ const alternates = [
 	{ hreflang: "en", href: new URL("/en/", Astro.site) },
 	{ hreflang: "x-default", href: new URL("/", Astro.site) },
 ];
+
+const favicons = Object.fromEntries(Object.entries(THEMES).map(([name, { favicon }]) => [name, favicon]));
 ---
 
 <!doctype html>
-<html lang={locale}>
+<html lang={locale} data-theme={DEFAULT_THEME}>
 	<head>
 		<meta charset="UTF-8" />
 		<title>{title}</title>
 		<meta name="description" content={summary} />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link id="favicon" rel="icon" type="image/svg+xml" href={THEMES[DEFAULT_THEME].favicon} />
+		<!-- Thème et mode appliqués avant le premier rendu (pas de flash) ; ThemeSwitch gère ensuite les clics -->
+		<script is:inline define:vars={{ keys: STORAGE_KEYS, favicons, fallback: DEFAULT_THEME }}>
+			const root = document.documentElement;
+			const read = (key) => {
+				try {
+					return localStorage.getItem(key);
+				} catch {
+					return null;
+				}
+			};
+			const theme = read(keys.theme);
+			const name = theme in favicons ? theme : fallback;
+			root.dataset.theme = name;
+			document.getElementById("favicon").href = favicons[name];
+			const mode = ["light", "dark"].includes(read(keys.mode)) ? read(keys.mode) : "system";
+			root.dataset.mode = mode;
+			const dark = mode === "dark" || (mode === "system" && matchMedia("(prefers-color-scheme: dark)").matches);
+			root.classList.add(dark ? "dark" : "light");
+		</script>
 		<link rel="canonical" href={canonical} />
 		{alternates.map(({ hreflang, href }) => <link rel="alternate" hreflang={hreflang} href={href} />)}
-		<link rel="preload" as="image" href={image} />
 
 		<meta property="og:url" content={canonical} />
 		<meta property="og:type" content="website" />
@@ -56,8 +77,11 @@ const alternates = [
 		{umamiSrc && umamiWebsiteId && <script defer is:inline src={umamiSrc} data-website-id={umamiWebsiteId} />}
 		<Vengeance />
 	</head>
-	<body class="relative bg-skin-fill text-skin-base print:text-black">
-		<div class="pixel-grid-bg absolute inset-0 -z-10 print:hidden"></div>
+	<body class="relative bg-skin-fill retro:text-skin-base retro:print:text-black">
+		<div class="pixel-grid-bg absolute inset-0 -z-10 classic:hidden! print:hidden"></div>
+		<div class="absolute top-0 -z-10 h-full w-full retro:hidden! print:hidden">
+			<div class="bg-skin-hue/10 absolute bottom-auto left-[20%] right-auto top-0 h-[200px] w-[200px] -translate-x-[30%] translate-y-[20%] rounded-full blur-[80px] invert-0 dark:bg-white/5"></div>
+		</div>
 		<slot />
 		<script>
 			import Alpine from "alpinejs";
@@ -105,31 +129,13 @@ const alternates = [
 				h2,
 				h3,
 				h4 {
-					font-family: var(--font-pixel);
-					font-weight: 600;
+					font-family: var(--font-heading);
+					font-weight: var(--theme-heading-weight);
 				}
 
 				/* La ligature « fi » de Pixelify Sans ressemble à un « A » */
-				:where(h1, h2, h3, h4, .font-pixel) {
+				:where([data-theme="retro"]) :where(h1, h2, h3, h4, .font-display) {
 					font-variant-ligatures: none;
-				}
-
-				@media print {
-					/* Impression sobre : polices système, pas de typo pixel */
-					body,
-					h1,
-					h2,
-					h3,
-					h4 {
-						font-family:
-							system-ui,
-							-apple-system,
-							"Segoe UI",
-							Roboto,
-							"Helvetica Neue",
-							sans-serif;
-						font-weight: inherit;
-					}
 				}
 			}
 

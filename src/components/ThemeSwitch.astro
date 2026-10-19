@@ -1,69 +1,162 @@
 ---
-import Theme from "@/icons/themeSwitch.astro";
+import PixelPalette from "pixelarticons/svg/gamepad.svg";
+import PixelSun from "pixelarticons/svg/sun.svg";
+import PixelMoon from "pixelarticons/svg/moon.svg";
+import PixelMonitor from "pixelarticons/svg/monitor.svg";
 import { useTranslations } from "@/i18n/ui";
+import { MODES, THEMES } from "@/themes";
 
 const t = useTranslations(Astro.currentLocale);
+
+const labels = {
+	themes: Object.fromEntries(Object.entries(THEMES).map(([name, { label }]) => [name, label])),
+	modes: Object.fromEntries(MODES.map((mode) => [mode, t(`theme.${mode}`)])),
+	theme: t("theme.label"),
+	mode: t("theme.mode"),
+	next: t("theme.next"),
+};
+
+const button =
+	"flex size-9 cursor-pointer items-center justify-center text-skin-base classic:rounded-md classic:ring-1 classic:ring-skin-neutral classic:ring-inset classic:hover:bg-skin-button-muted retro:pixel-border retro:pixel-border-muted retro:bg-skin-button-muted retro:hover:text-skin-hue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-skin-hue";
 ---
 
-<div class="no-print inline-flex items-center">
-	<!-- <div class="flex items-center gap-1">
-		<Theme />
-		<select name="themeSwitch" id="themeSwitch" class="block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 dark:text-gray-100 dark:ring-gray-700 sm:text-sm sm:leading-6">
-			<option value="system">System</option>
-			<option value="dark">Dark</option>
-			<option value="light">Light</option>
-		</select>
-	</div> -->
+<div class="no-print flex items-center gap-2" data-labels={JSON.stringify(labels)} id="themeSwitch">
+	<!-- Thème visuel : l'icône représente le thème actif -->
+	<button id="themeToggle" type="button" class={button}>
+		<svg class="size-5 retro:hidden!" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+			<circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle>
+			<circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle>
+			<circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle>
+			<circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle>
+			<path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path>
+		</svg>
+		<PixelPalette class="size-5 classic:hidden!" aria-hidden="true" />
+	</button>
 
-	<div class="group/theme flex items-center gap-2">
-		<label for="themeSwitch" class="flex items-center gap-1 text-sm font-medium leading-6 text-skin-base transition-transform ease-in-out group-hover/theme:rotate-90"><Theme /><span class="sr-only">{t("theme.label")}</span></label>
-		<select id="themeSwitch" name="themeSwitch" class="pixel-border pixel-border-muted focus-visible:pixel-border-hue block w-full bg-skin-button-muted py-1 pl-3 pr-8 font-pixel text-skin-base outline-none sm:text-sm sm:leading-6">
-			<option value="system">{t("theme.system")}</option>
-			<option value="dark">{t("theme.dark")}</option>
-			<option value="light">{t("theme.light")}</option>
-		</select>
-	</div>
+	<!-- Mode de couleur : l'icône représente le mode actif (data-mode sur <html>) -->
+	<button id="modeToggle" type="button" class={button}>
+		<span data-mode-icon="system">
+			<svg class="size-5 retro:hidden!" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+				<rect width="20" height="14" x="2" y="3" rx="2"></rect>
+				<line x1="8" x2="16" y1="21" y2="21"></line>
+				<line x1="12" x2="12" y1="17" y2="21"></line>
+			</svg>
+			<PixelMonitor class="size-5 classic:hidden!" aria-hidden="true" />
+		</span>
+		<span data-mode-icon="light">
+			<svg class="size-5 retro:hidden!" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+				<circle cx="12" cy="12" r="4"></circle>
+				<path d="M12 2v2"></path>
+				<path d="M12 20v2"></path>
+				<path d="m4.93 4.93 1.41 1.41"></path>
+				<path d="m17.66 17.66 1.41 1.41"></path>
+				<path d="M2 12h2"></path>
+				<path d="M20 12h2"></path>
+				<path d="m6.34 17.66-1.41 1.41"></path>
+				<path d="m19.07 4.93-1.41 1.41"></path>
+			</svg>
+			<PixelSun class="size-5 classic:hidden!" aria-hidden="true" />
+		</span>
+		<span data-mode-icon="dark">
+			<svg class="size-5 retro:hidden!" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+				<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+			</svg>
+			<PixelMoon class="size-5 classic:hidden!" aria-hidden="true" />
+		</span>
+	</button>
 
 	<style>
 		:global(.dark) {
 			color-scheme: dark;
 		}
+
+		/* Seule l'icône du mode actif est visible (système par défaut) */
+		[data-mode-icon] {
+			display: none;
+		}
+
+		:global(:root:not([data-mode="light"], [data-mode="dark"])) [data-mode-icon="system"],
+		:global(:root[data-mode="light"]) [data-mode-icon="light"],
+		:global(:root[data-mode="dark"]) [data-mode-icon="dark"] {
+			display: block;
+		}
 	</style>
 
 	<script>
-		const select = document.getElementById("themeSwitch") as HTMLSelectElement;
-		const theme = localStorage.getItem("theme");
-		const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+		import { MODES, STORAGE_KEYS, THEMES, type Mode, type ThemeName } from "@/themes";
 
-		if (theme !== null) {
-			select.value = theme;
-		} else {
-			select.value = systemTheme;
+		const root = document.documentElement;
+		const media = window.matchMedia("(prefers-color-scheme: dark)");
+		const themeButton = document.getElementById("themeToggle") as HTMLButtonElement;
+		const modeButton = document.getElementById("modeToggle") as HTMLButtonElement;
+		const labels = JSON.parse(document.getElementById("themeSwitch")?.dataset.labels ?? "{}");
+		const themes = Object.keys(THEMES) as ThemeName[];
+
+		function save(key: string, value: string) {
+			try {
+				localStorage.setItem(key, value);
+			} catch {
+				// Stockage indisponible (navigation privée…) : le choix vaut pour la page
+			}
 		}
 
-		function updateTheme(value: string) {
-			const theme = value === "system" ? systemTheme : value;
-			document.documentElement.classList.remove("light", "dark");
-			document.documentElement.classList.add(theme);
-			localStorage.setItem("theme", value);
+		const next = <T,>(list: readonly T[], current: T) => list[(list.indexOf(current) + 1) % list.length];
+
+		const currentTheme = () => (themes.includes(root.dataset.theme as ThemeName) ? (root.dataset.theme as ThemeName) : themes[0]);
+		const currentMode = () => (MODES.includes(root.dataset.mode as Mode) ? (root.dataset.mode as Mode) : "system");
+
+		function updateLabels() {
+			const theme = currentTheme();
+			const mode = currentMode();
+			const themeLabel = `${labels.theme} : ${labels.themes[theme]} (${labels.next} ${labels.themes[next(themes, theme)]})`;
+			const modeLabel = `${labels.mode} : ${labels.modes[mode]} (${labels.next} ${labels.modes[next(MODES, mode)]})`;
+			themeButton.setAttribute("aria-label", themeLabel);
+			themeButton.title = themeLabel;
+			modeButton.setAttribute("aria-label", modeLabel);
+			modeButton.title = modeLabel;
 		}
 
-		updateTheme(select.value);
+		function applyMode(mode: Mode) {
+			const dark = mode === "dark" || (mode === "system" && media.matches);
+			root.dataset.mode = mode;
+			root.classList.toggle("dark", dark);
+			root.classList.toggle("light", !dark);
+		}
 
-		select.addEventListener("change", (event: Event) => {
-			const select = event.target as HTMLSelectElement;
-			updateTheme(select.value);
+		function applyTheme(theme: ThemeName) {
+			root.dataset.theme = theme;
+			const favicon = document.getElementById("favicon") as HTMLLinkElement | null;
+			if (favicon) favicon.href = THEMES[theme].favicon;
+		}
+
+		themeButton.addEventListener("click", () => {
+			const theme = next(themes, currentTheme());
+			applyTheme(theme);
+			save(STORAGE_KEYS.theme, theme);
+			updateLabels();
+		});
+
+		modeButton.addEventListener("click", () => {
+			const mode = next(MODES, currentMode());
+			applyMode(mode);
+			save(STORAGE_KEYS.mode, mode);
+			updateLabels();
+		});
+
+		// En mode système, suit le réglage de l'OS en direct
+		media.addEventListener("change", () => {
+			if (currentMode() === "system") applyMode("system");
 		});
 
 		// Impression toujours en mode clair
 		window.addEventListener("beforeprint", () => {
-			document.documentElement.classList.remove("dark");
+			root.classList.remove("dark");
 		});
 
 		window.addEventListener("afterprint", () => {
-			if (select.value === "dark" || (select.value === "system" && systemTheme === "dark")) {
-				document.documentElement.classList.add("dark");
-			}
+			applyMode(currentMode());
 		});
+
+		updateLabels();
 	</script>
 </div>

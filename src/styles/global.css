@@ -17,13 +17,29 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 /*
- * Typo rétro : police pixel pour les titres et l'interface (font-pixel),
- * monospace lisible pour le texte courant (police par défaut).
+ * Variantes de thème (data-theme sur <html>, voir src/themes.ts).
+ * Pour n'afficher un élément que dans un thème : classic:hidden! / retro:hidden!
+ * (le « ! » évite les conflits d'ordre avec md:inline-block, etc.).
  */
+@custom-variant classic (&:where([data-theme="classic"], [data-theme="classic"] *));
+@custom-variant retro (&:where([data-theme="retro"], [data-theme="retro"] *));
+
+/* Polices propres au thème rétro (téléchargées seulement si utilisées) */
 @theme {
   --font-pixel: "Pixelify Sans", ui-monospace, monospace;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-  --default-font-family: var(--font-mono);
+}
+
+/*
+ * Rôles typographiques résolus selon le thème (themes.css) :
+ * font-body (texte courant), font-heading (titres), font-display
+ * (accents d'interface : pixel en rétro, police héritée en classique).
+ */
+@theme inline {
+  --font-body: var(--theme-font-body);
+  --font-heading: var(--theme-font-heading);
+  --font-display: var(--theme-font-display);
+  --default-font-family: var(--theme-font-body);
 }
 
 /*

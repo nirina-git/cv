@@ -10,10 +10,12 @@ import GitHub from "@/icons/GitHub.astro";
 import WorldMap from "@/icons/WorldMap.astro";
 import Check from "pixelarticons/svg/check.svg";
 import type { SocialIcon } from "@/types";
+import { THEMES } from "@/themes";
 
 const t = useTranslations(Astro.currentLocale);
 const { name, label, image, location, profiles, phone, email } = getCV(Astro.currentLocale).basics;
 const { city, region } = location;
+const pixelAvatar = THEMES.retro.avatar;
 
 const SOCIAL_ICONS: SocialIcon = {
 	GitHub,
@@ -92,11 +94,11 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
 				<filter id="crt-g" color-interpolation-filters="sRGB"><feColorMatrix values="0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0" /></filter>
 				<filter id="crt-b" color-interpolation-filters="sRGB"><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter>
 			</svg>
-			<img class="crt-img pixelated" src={image} alt={name} width="64" height="64" />
-			<img class="crt-split crt-split-r pixelated" src={image} alt="" aria-hidden="true" width="64" height="64" />
-			<img class="crt-split crt-split-b pixelated" src={image} alt="" aria-hidden="true" width="64" height="64" />
-			<img class="crt-slice pixelated" src={image} alt="" aria-hidden="true" width="64" height="64" />
-			<span class="crt-scanlines" style={`--avatar: url(${image})`} aria-hidden="true"></span>
+			<img class="crt-img pixelated" src={pixelAvatar} alt={name} width="64" height="64" />
+			<img class="crt-split crt-split-r pixelated" src={pixelAvatar} alt="" aria-hidden="true" width="64" height="64" />
+			<img class="crt-split crt-split-b pixelated" src={pixelAvatar} alt="" aria-hidden="true" width="64" height="64" />
+			<img class="crt-slice pixelated" src={pixelAvatar} alt="" aria-hidden="true" width="64" height="64" />
+			<span class="crt-scanlines" style={`--avatar: url(${pixelAvatar})`} aria-hidden="true"></span>
 		</figure>
 	</div>
 </Section>
