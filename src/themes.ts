@@ -11,7 +11,7 @@
 export const THEMES = {
 	classic: {
 		label: "Classique",
-		avatar: "/me_avatar.jpg",
+		avatar: "/me_avatar.webp",
 		favicon: "/favicon.svg",
 	},
 	retro: {

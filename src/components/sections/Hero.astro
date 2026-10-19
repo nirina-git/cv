@@ -13,8 +13,9 @@ import type { SocialIcon } from "@/types";
 import { THEMES } from "@/themes";
 
 const t = useTranslations(Astro.currentLocale);
-const { name, label, image, location, profiles, phone, email } = getCV(Astro.currentLocale).basics;
+const { name, label, location, profiles, phone, email } = getCV(Astro.currentLocale).basics;
 const { city, region } = location;
+const { avatar } = THEMES.classic;
 const pixelAvatar = THEMES.retro.avatar;
 
 const SOCIAL_ICONS: SocialIcon = {
@@ -97,7 +98,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
 			</footer>
 		</div>
 		<figure class="avatar print:hidden w-fit relative retro:hidden!">
-			<img class="shadow-lg shadow-skin-hues" src={image} alt={name} />
+			<img class="shadow-lg" src={avatar} alt={name} width="128" height="128" />
 			<div class="pointer-events-none absolute -inset-2">
 				<div class="absolute -inset-y-8 right-0 w-px bg-skin-hue/50 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
 				<div class="absolute -inset-y-8 left-0 w-px bg-skin-hue/50 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
@@ -106,7 +107,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
 			</div>
 		</figure>
 		<!-- Les images de l'avatar rétro sont en lazy : non téléchargées tant que le thème est masqué -->
-		<figure class="crt pixel-border pixel-shadow classic:hidden! print:hidden">
+		<figure class="crt classic:hidden! print:hidden">
 			<!-- Isolent un canal R, V ou B : recombinés en « screen », ils redonnent l'image -->
 			<svg class="absolute size-0" aria-hidden="true">
 				<filter id="crt-r" color-interpolation-filters="sRGB"><feColorMatrix values="1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0" /></filter>
@@ -138,18 +139,19 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
 	}
 
 	.avatar img {
-		@apply aspect-square w-32 rounded-2xl bg-cover;
+		/* Photo détourée en disque (scripts/avatar.py) : ombre ronde */
+		@apply aspect-square w-32 rounded-full bg-cover;
 	}
 
 	/*
-	 * Avatar « écran CRT » : image pixel 64px affichée en 128px (×2, sans lissage),
+	 * Avatar « CRT » : disque pixel 64px affichée en 128px (×2, sans lissage),
 	 * lignes de balayage permanentes et salves de glitch (décalage RGB + bande
 	 * déplacée) toutes les 4 s. Désactivé si prefers-reduced-motion.
 	 */
 	.crt {
-		@apply relative isolate w-fit p-2;
-		/* Écran sombre dans les deux thèmes : l'avatar ressort comme sur un moniteur */
-		background: rgb(13, 17, 31);
+		@apply relative isolate w-fit;
+		/* Seul le disque est visible : ombre pixel dure qui suit son contour */
+		filter: drop-shadow(6px 6px 0 rgba(var(--color-shadow), 0.9));
 		--glitch: 4s;
 	}
 
@@ -161,7 +163,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
 	.crt-split,
 	.crt-slice,
 	.crt-scanlines {
-		@apply pointer-events-none absolute top-2 left-2;
+		@apply pointer-events-none absolute top-0 left-0;
 	}
 
 	/* Canaux rouge et bleu, décalés pendant les salves (le vert reste sur .crt-img) */
