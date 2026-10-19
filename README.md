@@ -27,7 +27,16 @@ npm run dev       # http://localhost:4321
 
 Tout le contenu du CV (expériences, compétences, projets…) se modifie dans `cv.json`.
 
-Le style est rétro pixel : un thème unique (variante claire « papier » et sombre « écran CRT ») défini dans `src/styles/themes.css`, et les utilitaires pixel (bordures, ombres, grille) dans `src/styles/pixel.css`. L'impression reste sobre (polices système, palette neutre).
+Deux thèmes visuels, au choix du visiteur via l'icône en haut à droite (le choix est mémorisé) :
+
+- **Classique** (par défaut) : polices système, palette bleue, photo de profil ;
+- **Rétro** : style pixel art (polices Pixelify Sans / JetBrains Mono, bordures en escalier, avatar « écran CRT »).
+
+Chacun a une variante claire et sombre ; l'icône voisine fait défiler les modes système → clair → sombre. L'impression reste sobre quel que soit le thème (polices système, palette neutre).
+
+Pour modifier ou ajouter un thème : le déclarer dans `src/themes.ts` (nom, avatar, favicon), définir sa palette et ses polices dans `src/styles/themes.css`, et sa variante Tailwind dans `src/styles/global.css`. Dans les composants, les styles propres à un thème s'écrivent avec les préfixes `classic:` / `retro:` (ex. `classic:rounded-md retro:pixel-border`) ; comme ces variantes passent après `hover:`, `print:`…, une propriété préfixée doit l'être aussi dans ses états (`classic:hover:…`). Les utilitaires pixel sont dans `src/styles/pixel.css`.
+
+Le site n'affiche que la version française ; la version anglaise (`cv.en.json`) reste publiée sur `/en/` mais n'est plus liée depuis la page (le composant `LanguageSwitch` est conservé pour la réactiver).
 
 ## Déploiement
 
