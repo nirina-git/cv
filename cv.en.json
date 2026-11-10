@@ -93,16 +93,12 @@
       "location": "France",
       "startDate": "2013-01-01",
       "endDate": "2015-01-01",
-      "summary": "Design of websites for craftsmen and e-commerce shops (including Eden Service Pro).",
+      "summary": "Websites for craftsmen and e-commerce shops, plus graphic design (logos, banners).",
       "highlights": [],
-      "skills": ["WordPress", "PHP", "HTML", "CSS", "MySQL"],
+      "skills": ["WordPress", "HTML", "CSS"],
       "url": "",
       "achievements": [],
-      "responsibilities": [
-        "Design of websites for craftsmen and e-commerce shops",
-        "Creation of graphic assets (banners, logos, icons)",
-        "HTML and CSS integration, first steps with JavaScript"
-      ]
+      "responsibilities": []
     },
     {
       "name": "Collège Paul Éluard",
@@ -111,7 +107,7 @@
       "location": "Bonneuil-sur-Marne, Île-de-France, France",
       "startDate": "2009-01-01",
       "endDate": "2011-01-01",
-      "summary": "Student supervision and mentoring, homework help and management of relations with families.",
+      "summary": "Student supervision, homework help and liaison with families.",
       "highlights": [],
       "skills": [],
       "url": "",
@@ -125,17 +121,12 @@
       "location": "France",
       "startDate": "2008-01-01",
       "endDate": "2012-01-01",
-      "summary": "IT infrastructure maintenance and administration, with on-site and remote user support.",
+      "summary": "IT fleet maintenance, temporary networks on construction sites and user support.",
       "highlights": [],
-      "skills": ["Windows XP / 7", "Active Directory", "Network administration", "Backup & cloning", "Switches / Wi-Fi", "Antivirus"],
+      "skills": ["Windows", "Active Directory", "Networking", "User support"],
       "url": "",
       "achievements": [],
-      "responsibilities": [
-        "Workstation maintenance and administration (Windows XP/7, Active Directory, updates, backup, antivirus)",
-        "Installation and management of temporary networks on construction sites (switches, Wi-Fi, cabling, connection sharing)",
-        "Workstation cloning and deployment",
-        "On-site and remote user support (hotline and troubleshooting)"
-      ]
+      "responsibilities": []
     },
     {
       "name": "Netvibes",
@@ -144,20 +135,12 @@
       "location": "Paris, Île-de-France, France",
       "startDate": "2006-01-01",
       "endDate": "2008-01-01",
-      "summary": "Integration and graphic design for Netvibes Universes, in a startup environment on a platform with a worldwide audience (direct competitor of iGoogle).",
+      "summary": "Integration and graphic design of Netvibes Universes, in a startup with a worldwide audience.",
       "highlights": [],
-      "skills": ["HTML", "CSS", "JavaScript", "Photoshop", "Subversion", "Netvibes widgets / API"],
+      "skills": ["HTML", "CSS", "JavaScript", "Photoshop"],
       "url": "",
-      "achievements": [
-        "Contributed to a world-scale web platform, direct competitor of iGoogle",
-        "Experience in a fast-growing startup environment"
-      ],
-      "responsibilities": [
-        "Development of Netvibes Universes (widget-based custom mini-sites)",
-        "HTML/CSS integration and creation of graphic assets (banners, icons)",
-        "Team collaboration on a large-scale project",
-        "Use of Subversion (version control) and macOS"
-      ]
+      "achievements": [],
+      "responsibilities": []
     },
     {
       "name": "Numericable",
@@ -166,17 +149,12 @@
       "location": "Champs-sur-Marne, Île-de-France, France",
       "startDate": "2005-01-01",
       "endDate": "2005-12-31",
-      "summary": "Testing and validation of information system updates in pre-production, notably the CRM managing TV/Internet offers.",
+      "summary": "Pre-production testing of information system updates (TV/Internet offers CRM), test plans and SQL checks.",
       "highlights": [],
-      "skills": ["UAT / acceptance testing", "SQL", "Test plan writing"],
+      "skills": ["UAT testing", "SQL"],
       "url": "",
       "achievements": [],
-      "responsibilities": [
-        "Testing and validation of IS updates in pre-production (CRM, TV/Internet offers)",
-        "Writing test plans and reporting bugs",
-        "Verification of new offers and features before release",
-        "Database queries (SQL) for data control"
-      ]
+      "responsibilities": []
     },
     {
       "name": "Ed L'épicier",
@@ -185,20 +163,12 @@
       "location": "France",
       "startDate": "2004-01-01",
       "endDate": "2004-12-31",
-      "summary": "Migration and standardization of a fleet of around 80 workstations across the Paris and Marseille sites, and preparation of the Active Directory rollout.",
+      "summary": "Migration and standardization of a fleet of around 80 workstations (Paris and Marseille) and preparation of the Active Directory rollout.",
       "highlights": [],
-      "skills": ["Windows 2000 Server", "Active Directory", "Networking / NetBIOS", "Workstation deployment", "User support"],
+      "skills": ["Windows 2000 Server", "Active Directory", "Workstation deployment"],
       "url": "",
-      "achievements": [
-        "Migration and standardization of a fleet of about 80 workstations (Paris and Marseille)"
-      ],
-      "responsibilities": [
-        "Workstation migration to Windows 2000",
-        "Preparation of the Active Directory deployment plan",
-        "Standardization of workstations and servers (NetBIOS naming)",
-        "Rollout of updates and fleet maintenance",
-        "On-site work at the Marseille site to bring systems into compliance"
-      ]
+      "achievements": [],
+      "responsibilities": []
     }
   ],
   "volunteer": [
