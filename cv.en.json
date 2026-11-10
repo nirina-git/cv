@@ -118,24 +118,6 @@
       "responsibilities": []
     },
     {
-      "name": "Comité de Construction Régional",
-      "position": "IT Technician (volunteer)",
-      "location_type": "Hybrid",
-      "location": "France",
-      "startDate": "2008-01-01",
-      "endDate": "2012-01-01",
-      "summary": "IT infrastructure maintenance and administration, with on-site and remote user support.",
-      "highlights": [],
-      "skills": ["Windows XP / 7", "Active Directory", "Networking / Wi-Fi", "Workstation deployment"],
-      "url": "",
-      "achievements": [],
-      "responsibilities": [
-        "Workstation maintenance (Windows, Active Directory, backups, antivirus)",
-        "Installation of temporary networks on construction sites (switches, Wi-Fi, cabling)",
-        "On-site and remote user support"
-      ]
-    },
-    {
       "name": "Netvibes",
       "position": "Junior Web Designer",
       "location_type": "On-site",
@@ -194,11 +176,11 @@
   "volunteer": [
     {
       "organization": "Comité de Construction Régional",
-      "position": "Volunteer",
+      "position": "IT Technician",
       "url": "",
       "startDate": "2008-01-01",
       "endDate": "2012-01-01",
-      "summary": "IT infrastructure management and maintenance"
+      "summary": "IT fleet maintenance, temporary networks on construction sites, and on-site and remote user support."
     }
   ],
   "education": [

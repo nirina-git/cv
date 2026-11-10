@@ -8,6 +8,7 @@ import Hero from "@/components/sections/Hero.astro";
 import Projects from "@/components/sections/Projects.astro";
 import Skills from "@/components/sections/Skills.astro";
 import Tail from "@/components/sections/Tail.astro";
+import Volunteer from "@/components/sections/Volunteer.astro";
 import KeyboardManager from "@/components/KeyboardManager.astro";
 import Languages from "@/components/sections/Languages.astro";
 import ThemeSwitch from "@/components/ThemeSwitch.astro";
@@ -31,6 +32,7 @@ const { name, label } = getCV(Astro.currentLocale).basics;
 			<Projects className="print:hidden" />
 			<Skills className="print:hidden" />
 			<Education />
+			<Volunteer />
 		</div>
 		<Tail />
 	</main>

@@ -118,24 +118,6 @@
       "responsibilities": []
     },
     {
-      "name": "Comité de Construction Régional",
-      "position": "Technicien informatique (bénévole)",
-      "location_type": "Hybride",
-      "location": "France",
-      "startDate": "2008-01-01",
-      "endDate": "2012-01-01",
-      "summary": "Maintenance et administration du parc informatique, support utilisateur sur site et à distance.",
-      "highlights": [],
-      "skills": ["Windows XP / 7", "Active Directory", "Réseau / Wi-Fi", "Déploiement de postes"],
-      "url": "",
-      "achievements": [],
-      "responsibilities": [
-        "Maintenance des postes de travail (Windows, Active Directory, sauvegardes, antivirus)",
-        "Installation de réseaux temporaires sur chantiers (switchs, Wi-Fi, câblage)",
-        "Support utilisateur sur site et à distance"
-      ]
-    },
-    {
       "name": "Netvibes",
       "position": "Webdesigner Junior",
       "location_type": "Sur site",
@@ -194,11 +176,11 @@
   "volunteer": [
     {
       "organization": "Comité de Construction Régional",
-      "position": "Bénévole",
+      "position": "Technicien informatique",
       "url": "",
       "startDate": "2008-01-01",
       "endDate": "2012-01-01",
-      "summary": "Gestion et maintenance du parc informatique"
+      "summary": "Maintenance du parc informatique, réseaux temporaires sur chantiers et support utilisateurs sur site et à distance."
     }
   ],
   "education": [
