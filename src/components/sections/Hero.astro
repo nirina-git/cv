@@ -99,12 +99,6 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
 		</div>
 		<figure class="avatar print:hidden w-fit relative retro:hidden!">
 			<img class="shadow-lg" src={avatar} alt={name} width="128" height="128" />
-			<div class="pointer-events-none absolute -inset-2">
-				<div class="absolute -inset-y-8 right-0 w-px bg-skin-hue/50 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-				<div class="absolute -inset-y-8 left-0 w-px bg-skin-hue/50 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-				<div class="absolute -inset-x-8 bottom-0 h-px bg-skin-hue/50 [mask-image:linear-gradient(to_left,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-				<div class="absolute -inset-x-8 top-0 h-px bg-skin-hue/50 [mask-image:linear-gradient(to_left,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-			</div>
 		</figure>
 		<!-- Les images de l'avatar rétro sont en lazy : non téléchargées tant que le thème est masqué -->
 		<figure class="crt classic:hidden! print:hidden">
