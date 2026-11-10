@@ -256,49 +256,34 @@
   "certificates": [],
   "skills": [
     {
-      "name": "Développement Web",
-      "level": "Avancé",
-      "keywords": ["HTML", "CSS", "JavaScript", "PHP"]
-    },
-    {
-      "name": "Frameworks Front",
-      "level": "Intermédiaire",
-      "keywords": ["Astro", "Nuxt", "Vue 3", "Svelte / SvelteKit", "Tailwind CSS", "TypeScript"]
-    },
-    {
-      "name": "Back-end & ORM",
-      "level": "Intermédiaire",
-      "keywords": ["Node.js", "Express", "Prisma", "Drizzle", "Supabase"]
-    },
-    {
-      "name": "DevOps & Déploiement",
-      "level": "Intermédiaire",
-      "keywords": ["Git", "Docker", "VPS / Dokploy", "GitHub"]
-    },
-    {
-      "name": "Bases de données",
-      "level": "Intermédiaire",
-      "keywords": ["PostgreSQL", "SQLite", "MySQL", "SQL"]
-    },
-    {
-      "name": "Environnements",
-      "level": "Avancé",
-      "keywords": ["VS Code", "Linux", "macOS"]
-    },
-    {
-      "name": "UI/UX & Design",
-      "level": "Intermédiaire",
-      "keywords": ["Photoshop", "Canva"]
-    },
-    {
-      "name": "IA & Productivité",
-      "level": "Intermédiaire",
-      "keywords": ["LLM / Prompting", "API Gemini", "GitHub Copilot", "Développement assisté par IA", "Automatisation"]
-    },
-    {
       "name": "Support & Administration",
-      "level": "Intermédiaire",
+      "level": "Avancé",
       "keywords": ["Support utilisateurs", "Microsoft 365", "ISO 27001", "Maintenance PC", "Diagnostic réseau"]
+    },
+    {
+      "name": "Développement web",
+      "level": "Intermédiaire",
+      "keywords": ["HTML", "CSS", "JavaScript", "TypeScript", "Tailwind CSS"]
+    },
+    {
+      "name": "Frameworks",
+      "level": "Intermédiaire",
+      "keywords": ["Astro", "Nuxt / Vue", "SvelteKit"]
+    },
+    {
+      "name": "Données & déploiement",
+      "level": "Intermédiaire",
+      "keywords": ["PostgreSQL", "SQLite", "Supabase", "Docker", "Dokploy", "Git", "GitHub"]
+    },
+    {
+      "name": "IA",
+      "level": "Intermédiaire",
+      "keywords": ["Développement assisté par IA", "LLM / Prompting", "Automatisation"]
+    },
+    {
+      "name": "Outils",
+      "level": "Avancé",
+      "keywords": ["Linux", "macOS", "VS Code", "Photoshop", "Canva"]
     }
   ],
   "languages": [
@@ -336,7 +321,7 @@
     {
       "name": "Portfolio & CV Interactif",
       "isActive": true,
-      "description": "CV interactif bilingue avec thèmes classique et rétro, mode sombre et optimisation impression, déployé sur nirina.rmnjs.org",
+      "description": "CV bilingue avec thèmes classique et rétro, mode sombre et version imprimable.",
       "highlights": [
         "Astro · Tailwind CSS · TypeScript"
       ],
@@ -346,9 +331,9 @@
     {
       "name": "Katalog",
       "isActive": false,
-      "description": "Catalogue de matériels avec import/export Excel et gestion d'images. Projet le plus abouti, déployé en environnement privé.",
+      "description": "Catalogue de matériels avec import/export Excel et gestion d'images.",
       "highlights": [
-        "Nuxt 3 · Vue 3 · Prisma · PostgreSQL · Tailwind CSS · TypeScript"
+        "Nuxt · PostgreSQL · Tailwind CSS"
       ],
       "url": "",
       "github": ""
@@ -356,19 +341,19 @@
     {
       "name": "Lemuel CRM",
       "isActive": false,
-      "description": "CRM de prospection B2B mono-utilisateur.",
+      "description": "CRM de prospection B2B avec assistance IA.",
       "highlights": [
-        "Node.js · Express · SQLite · Vue 3 · Gemini (IA)"
+        "Vue · Node.js · SQLite · Gemini"
       ],
       "url": "",
       "github": ""
     },
     {
-      "name": "FDHN",
+      "name": "Kalendrie",
       "isActive": false,
-      "description": "Application de gestion de programme permettant d'organiser et planifier son emploi du temps, avec export PDF.",
+      "description": "Planification d'emploi du temps avec export PDF.",
       "highlights": [
-        "SvelteKit · Svelte 5 · Drizzle ORM · SQLite · Tailwind CSS · TypeScript"
+        "SvelteKit · SQLite · Tailwind CSS"
       ],
       "url": "",
       "github": ""
@@ -376,9 +361,9 @@
     {
       "name": "Kartara",
       "isActive": false,
-      "description": "Carte interactive pour géolocaliser des adresses avec photos associées.",
+      "description": "Carte interactive pour géolocaliser des adresses avec photos.",
       "highlights": [
-        "HTML · JavaScript · Leaflet · Supabase"
+        "JavaScript · Leaflet · Supabase"
       ],
       "url": "",
       "github": ""

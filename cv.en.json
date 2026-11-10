@@ -256,49 +256,34 @@
   "certificates": [],
   "skills": [
     {
-      "name": "Web Development",
-      "level": "Advanced",
-      "keywords": ["HTML", "CSS", "JavaScript", "PHP"]
-    },
-    {
-      "name": "Front-end Frameworks",
-      "level": "Intermediate",
-      "keywords": ["Astro", "Nuxt", "Vue 3", "Svelte / SvelteKit", "Tailwind CSS", "TypeScript"]
-    },
-    {
-      "name": "Back-end & ORM",
-      "level": "Intermediate",
-      "keywords": ["Node.js", "Express", "Prisma", "Drizzle", "Supabase"]
-    },
-    {
-      "name": "DevOps & Deployment",
-      "level": "Intermediate",
-      "keywords": ["Git", "Docker", "VPS / Dokploy", "GitHub"]
-    },
-    {
-      "name": "Databases",
-      "level": "Intermediate",
-      "keywords": ["PostgreSQL", "SQLite", "MySQL", "SQL"]
-    },
-    {
-      "name": "Environments",
-      "level": "Advanced",
-      "keywords": ["VS Code", "Linux", "macOS"]
-    },
-    {
-      "name": "UI/UX & Design",
-      "level": "Intermediate",
-      "keywords": ["Photoshop", "Canva"]
-    },
-    {
-      "name": "AI & Productivity",
-      "level": "Intermediate",
-      "keywords": ["LLM / Prompting", "Gemini API", "GitHub Copilot", "AI-assisted development", "Automation"]
-    },
-    {
       "name": "Support & Administration",
-      "level": "Intermediate",
+      "level": "Advanced",
       "keywords": ["User support", "Microsoft 365", "ISO 27001", "PC maintenance", "Network diagnostics"]
+    },
+    {
+      "name": "Web development",
+      "level": "Intermediate",
+      "keywords": ["HTML", "CSS", "JavaScript", "TypeScript", "Tailwind CSS"]
+    },
+    {
+      "name": "Frameworks",
+      "level": "Intermediate",
+      "keywords": ["Astro", "Nuxt / Vue", "SvelteKit"]
+    },
+    {
+      "name": "Data & deployment",
+      "level": "Intermediate",
+      "keywords": ["PostgreSQL", "SQLite", "Supabase", "Docker", "Dokploy", "Git", "GitHub"]
+    },
+    {
+      "name": "AI",
+      "level": "Intermediate",
+      "keywords": ["AI-assisted development", "LLM / Prompting", "Automation"]
+    },
+    {
+      "name": "Tools",
+      "level": "Advanced",
+      "keywords": ["Linux", "macOS", "VS Code", "Photoshop", "Canva"]
     }
   ],
   "languages": [
@@ -336,7 +321,7 @@
     {
       "name": "Portfolio & Interactive CV",
       "isActive": true,
-      "description": "Bilingual interactive CV with classic and retro themes, dark mode and print optimization, deployed at nirina.rmnjs.org",
+      "description": "Bilingual CV with classic and retro themes, dark mode and a printable version.",
       "highlights": [
         "Astro · Tailwind CSS · TypeScript"
       ],
@@ -346,9 +331,9 @@
     {
       "name": "Katalog",
       "isActive": false,
-      "description": "Equipment catalog with Excel import/export and image management. Most polished project, deployed in a private environment.",
+      "description": "Equipment catalog with Excel import/export and image management.",
       "highlights": [
-        "Nuxt 3 · Vue 3 · Prisma · PostgreSQL · Tailwind CSS · TypeScript"
+        "Nuxt · PostgreSQL · Tailwind CSS"
       ],
       "url": "",
       "github": ""
@@ -356,19 +341,19 @@
     {
       "name": "Lemuel CRM",
       "isActive": false,
-      "description": "Single-user B2B prospecting CRM.",
+      "description": "B2B prospecting CRM with AI assistance.",
       "highlights": [
-        "Node.js · Express · SQLite · Vue 3 · Gemini (AI)"
+        "Vue · Node.js · SQLite · Gemini"
       ],
       "url": "",
       "github": ""
     },
     {
-      "name": "FDHN",
+      "name": "Kalendrie",
       "isActive": false,
-      "description": "Program management app to organize and plan a schedule, with PDF export.",
+      "description": "Schedule planning app with PDF export.",
       "highlights": [
-        "SvelteKit · Svelte 5 · Drizzle ORM · SQLite · Tailwind CSS · TypeScript"
+        "SvelteKit · SQLite · Tailwind CSS"
       ],
       "url": "",
       "github": ""
@@ -376,9 +361,9 @@
     {
       "name": "Kartara",
       "isActive": false,
-      "description": "Interactive map to geolocate addresses with attached photos.",
+      "description": "Interactive map to geolocate addresses with photos.",
       "highlights": [
-        "HTML · JavaScript · Leaflet · Supabase"
+        "JavaScript · Leaflet · Supabase"
       ],
       "url": "",
       "github": ""
