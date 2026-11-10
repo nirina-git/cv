@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Nirina Ramamonjisoa",
-    "label": "IT Support Technician & Web Developer | Studying for a BTS CIRE",
+    "label": "IT Support Technician & Web Developer | Cybersecurity training",
     "image": "/me_avatar.webp",
     "email": "nirina@rmnjs.org",
     "phone": "+33 6 29 61 01 26",
     "url": "",
-    "summary": "IT support technician with over 20 years of experience, currently studying for a BTS CIRE. Day to day: user support, Microsoft 365 administration and ISO 27001 compliance. Also trained as an application developer, from design to deployment.",
+    "summary": "IT support technician with over 20 years of experience, currently training in cybersecurity. Day to day: user support, Microsoft 365 administration and ISO 27001 compliance. Also trained as an application developer, from design to deployment.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -30,7 +30,7 @@
       "location": "France",
       "startDate": "2025-07-01",
       "endDate": null,
-      "summary": "Technical support and Microsoft 365 administration, ISO 27001 compliance work and support for an application built with Base44, while studying for a BTS CIRE.",
+      "summary": "Technical support and Microsoft 365 administration, ISO 27001 compliance work and support for an application built with Base44, alongside cybersecurity training.",
       "highlights": [],
       "skills": ["User support", "Microsoft 365", "ISO 27001", "Base44", "AI-assisted development"],
       "url": "",
@@ -214,8 +214,8 @@
   "education": [
     {
       "institution": "Tech In France",
-      "area": "BTS CIRE",
-      "studyType": "Brevet de Technicien Supérieur (BTS)",
+      "area": "Cybersecurity",
+      "studyType": "Professional training",
       "startDate": "2026-09-01",
       "endDate": null,
       "url": ""
