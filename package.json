@@ -21,7 +21,7 @@
     "hotkeypad": "1.0.2",
     "pixelarticons": "^2.4.2",
     "tailwindcss": "^4.3.5",
-    "typescript": "^5.9.3"
+    "typescript": "^6.0.3"
   },
   "devDependencies": {
     "@types/alpinejs": "^3.13.11",
