@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Nirina Ramamonjisoa",
-    "label": "Web Developer & IT Support | Hybrid Profile | Remote from France & Mauritius",
+    "label": "IT Support Technician & Web Developer | Studying for a BTS CIRE",
     "image": "/me_avatar.webp",
     "email": "nirina@rmnjs.org",
     "phone": "+33 6 29 61 01 26",
     "url": "",
-    "summary": "Hybrid web development and IT support profile, with over 15 years of experience across varied technical environments. Autonomous in building web applications and websites (Astro, Nuxt, Tailwind CSS) and managing projects end to end: PostgreSQL databases, hosting on Linux VPS, deployment with Docker and Dokploy, Git versioning. Solid experience in user support, system administration and tool migrations. Regular use of AI tools for development, automation and technology watch. Available for remote work from France or Mauritius.",
+    "summary": "Hybrid IT support and web development profile, with over 20 years of experience across varied technical environments. Day-to-day IT support technician: user assistance, Microsoft 365 administration and ISO 27001 compliance work, while studying for a BTS CIRE (French two-year technical degree). Trained as an application developer, autonomous in building web applications and websites (Astro, Nuxt, Tailwind CSS) and managing projects end to end: PostgreSQL databases, hosting on Linux VPS, deployment with Docker and Dokploy, Git versioning. Regular use of AI tools for development, automation and technology watch.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -25,20 +25,21 @@
   "work": [
     {
       "name": "Tech In France",
-      "position": "Developer & O365 Administrator",
+      "position": "IT Support Technician",
       "location_type": "Remote",
       "location": "France",
       "startDate": "2025-07-01",
       "endDate": null,
-      "summary": "Training as an application developer, then in cybersecurity, alongside operational duties: Microsoft 365 administration and AI-assisted development of internal tools (vibe coding).",
+      "summary": "Technical support and Microsoft 365 administration, ISO 27001 compliance work and support for an application built with Base44, while studying for a BTS CIRE.",
       "highlights": [],
-      "skills": ["Microsoft 365", "O365 administration", "Vibe coding / AI", "Cybersecurity"],
+      "skills": ["User support", "Microsoft 365", "ISO 27001", "Base44", "AI-assisted development"],
       "url": "",
       "achievements": [],
       "responsibilities": [
+        "User support and assistance on a business application built with Base44",
+        "Bringing the information system into compliance with the ISO 27001 standard",
         "Administration of the Microsoft Office 365 environment (users, licenses, services)",
-        "AI-assisted development of internal tools (vibe coding)",
-        "Training as an application developer, then in cybersecurity"
+        "AI-assisted development of internal tools"
       ]
     },
     {
@@ -47,7 +48,7 @@
       "location_type": "Remote",
       "location": "France",
       "startDate": "2023-01-01",
-      "endDate": null,
+      "endDate": "2025-06-30",
       "summary": "Autonomous design and development of web applications and websites, with an AI-assisted workflow: equipment catalog, CRM, planning calendar, address geolocation map with photos, interactive CV redesign.",
       "highlights": [],
       "skills": ["Astro", "Nuxt", "TypeScript", "Tailwind CSS", "HTML", "CSS", "PostgreSQL", "Docker", "Dokploy", "VPS / Linux", "Git", "AI / LLM"],
@@ -213,10 +214,18 @@
   "education": [
     {
       "institution": "Tech In France",
-      "area": "Application Developer, then Cybersecurity",
+      "area": "BTS CIRE",
+      "studyType": "Brevet de Technicien Supérieur (BTS)",
+      "startDate": "2026-09-01",
+      "endDate": null,
+      "url": ""
+    },
+    {
+      "institution": "Tech In France",
+      "area": "Application Developer",
       "studyType": "Professional training",
       "startDate": "2025-07-01",
-      "endDate": null,
+      "endDate": "2026-06-30",
       "url": ""
     },
     {
@@ -284,12 +293,12 @@
     {
       "name": "AI & Productivity",
       "level": "Intermediate",
-      "keywords": ["LLM / Prompting", "Gemini API", "GitHub Copilot", "Vibe coding", "Automation"]
+      "keywords": ["LLM / Prompting", "Gemini API", "GitHub Copilot", "AI-assisted development", "Automation"]
     },
     {
       "name": "Support & Administration",
       "level": "Intermediate",
-      "keywords": ["User support", "Microsoft 365", "PC maintenance", "Network diagnostics"]
+      "keywords": ["User support", "Microsoft 365", "ISO 27001", "PC maintenance", "Network diagnostics"]
     }
   ],
   "languages": [
@@ -327,7 +336,7 @@
     {
       "name": "Portfolio & Interactive CV",
       "isActive": true,
-      "description": "Interactive CV with color themes, dark mode and print optimization, deployed at nirina.rmnjs.org",
+      "description": "Bilingual interactive CV with classic and retro themes, dark mode and print optimization, deployed at nirina.rmnjs.org",
       "highlights": [
         "Astro · Tailwind CSS · TypeScript"
       ],
