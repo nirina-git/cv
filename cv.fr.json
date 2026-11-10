@@ -93,12 +93,15 @@
       "location": "France",
       "startDate": "2013-01-01",
       "endDate": "2015-01-01",
-      "summary": "Sites web pour artisans et boutiques e-commerce, et création graphique (logos, bannières).",
+      "summary": "Conception de sites web pour artisans et boutiques e-commerce (dont Eden Service Pro).",
       "highlights": [],
-      "skills": ["WordPress", "HTML", "CSS"],
+      "skills": ["WordPress", "HTML", "CSS", "Photoshop"],
       "url": "",
       "achievements": [],
-      "responsibilities": []
+      "responsibilities": [
+        "Création d'éléments graphiques (bannières, logos, icônes)",
+        "Intégration HTML et CSS, premiers pas en JavaScript"
+      ]
     },
     {
       "name": "Collège Paul Éluard",
@@ -107,7 +110,7 @@
       "location": "Bonneuil-sur-Marne, Île-de-France, France",
       "startDate": "2009-01-01",
       "endDate": "2011-01-01",
-      "summary": "Encadrement des élèves, aide aux devoirs et lien avec les familles.",
+      "summary": "Surveillance et encadrement des élèves, aide aux devoirs et gestion des relations avec les familles.",
       "highlights": [],
       "skills": [],
       "url": "",
@@ -116,17 +119,21 @@
     },
     {
       "name": "Comité de Construction Régional",
-      "position": "Technicien informatique",
+      "position": "Technicien informatique (bénévole)",
       "location_type": "Hybride",
       "location": "France",
       "startDate": "2008-01-01",
       "endDate": "2012-01-01",
-      "summary": "Maintenance du parc informatique, réseaux temporaires sur chantiers et support utilisateurs.",
+      "summary": "Maintenance et administration du parc informatique, support utilisateur sur site et à distance.",
       "highlights": [],
-      "skills": ["Windows", "Active Directory", "Réseau", "Support utilisateur"],
+      "skills": ["Windows XP / 7", "Active Directory", "Réseau / Wi-Fi", "Déploiement de postes"],
       "url": "",
       "achievements": [],
-      "responsibilities": []
+      "responsibilities": [
+        "Maintenance des postes de travail (Windows, Active Directory, sauvegardes, antivirus)",
+        "Installation de réseaux temporaires sur chantiers (switchs, Wi-Fi, câblage)",
+        "Support utilisateur sur site et à distance"
+      ]
     },
     {
       "name": "Netvibes",
@@ -135,12 +142,17 @@
       "location": "Paris, Île-de-France, France",
       "startDate": "2006-01-01",
       "endDate": "2008-01-01",
-      "summary": "Intégration et design graphique des Univers Netvibes, dans une startup à audience mondiale.",
+      "summary": "Intégration et design graphique pour les Univers Netvibes, en environnement startup sur une plateforme à audience mondiale (concurrent direct d'iGoogle).",
       "highlights": [],
-      "skills": ["HTML", "CSS", "JavaScript", "Photoshop"],
+      "skills": ["HTML", "CSS", "JavaScript", "Photoshop", "Subversion"],
       "url": "",
-      "achievements": [],
-      "responsibilities": []
+      "achievements": [
+        "Contribution à une plateforme web d'envergure mondiale, concurrente directe d'iGoogle"
+      ],
+      "responsibilities": [
+        "Développement des Univers Netvibes (mini-sites personnalisés à base de widgets)",
+        "Intégration HTML/CSS et création d'éléments graphiques"
+      ]
     },
     {
       "name": "Numericable",
@@ -149,12 +161,16 @@
       "location": "Champs-sur-Marne, Île-de-France, France",
       "startDate": "2005-01-01",
       "endDate": "2005-12-31",
-      "summary": "Recette des mises à jour du SI en préproduction (CRM des offres TV/Internet), cahiers de tests et contrôles SQL.",
+      "summary": "Recette et validation des mises à jour du SI en préproduction, notamment du CRM gérant les offres TV/Internet.",
       "highlights": [],
-      "skills": ["Recette / UAT", "SQL"],
+      "skills": ["Recette / UAT", "SQL", "Rédaction de tests"],
       "url": "",
       "achievements": [],
-      "responsibilities": []
+      "responsibilities": [
+        "Rédaction de cahiers de tests et remontée des bugs",
+        "Vérification des nouvelles offres avant mise en ligne",
+        "Contrôle des données par requêtes SQL"
+      ]
     },
     {
       "name": "Ed L'épicier",
@@ -163,12 +179,16 @@
       "location": "France",
       "startDate": "2004-01-01",
       "endDate": "2004-12-31",
-      "summary": "Migration et standardisation d'un parc d'environ 80 postes (Paris et Marseille) et préparation du déploiement Active Directory.",
+      "summary": "Migration et standardisation d'un parc d'environ 80 postes sur les sites de Paris et Marseille, et préparation du déploiement Active Directory.",
       "highlights": [],
-      "skills": ["Windows 2000 Server", "Active Directory", "Déploiement de postes"],
+      "skills": ["Windows 2000 Server", "Active Directory", "Déploiement de postes", "Support utilisateur"],
       "url": "",
       "achievements": [],
-      "responsibilities": []
+      "responsibilities": [
+        "Migration des postes de travail vers Windows 2000",
+        "Préparation du plan de déploiement Active Directory",
+        "Intervention à Marseille pour la mise en conformité des systèmes"
+      ]
     }
   ],
   "volunteer": [
