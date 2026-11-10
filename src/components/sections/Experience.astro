@@ -97,7 +97,7 @@ const { work } = getCV(Astro.currentLocale)
                 )}
 
                 {(responsibilities?.length > 0 || achievements?.length > 0) && (
-                <div class="print:block! md:after:from-skin-fill dark:md:after:to-skin-fill/0  flex relative flex-col max-sm:h-auto! print:h-auto! gap-4 print:gap-2 md:after:bg-linear-to-t md:after:absolute md:after:bottom-0 md:after:w-full print:after:hidden md:after:h-12 md:after:content-[''] " :class="expanded ? 'after:hidden' : ''" x-show="expanded" x-collapse.min.50px>
+                <div class="print:block! md:after:from-skin-fill dark:md:after:to-skin-fill/0  flex relative flex-col max-md:h-auto! print:h-auto! gap-4 print:gap-2 md:after:bg-linear-to-t md:after:absolute md:after:bottom-0 md:after:w-full print:after:hidden md:after:h-12 md:after:content-[''] " :class="expanded ? 'after:hidden' : ''" x-show="expanded" x-collapse.min.50px>
                 {responsibilities?.length > 0 && (
                   <div class="flex flex-col gap-1">
                     <h4>{t("experience.responsibilities")}</h4>
@@ -121,7 +121,7 @@ const { work } = getCV(Astro.currentLocale)
                 )}
                 </div>
 
-                <button @click="expanded = ! expanded" class="print:hidden group/more w-fit cursor-pointer items-center justify-center gap-1.5 flex classic:text-xs classic:underline classic:text-skin-muted classic:transition-all retro:font-display retro:text-sm retro:text-skin-hue classic:hover:text-skin-base retro:hover:text-skin-base">
+                <button @click="expanded = ! expanded" :aria-expanded="expanded" aria-expanded="false" class="print:hidden max-md:hidden! group/more w-fit cursor-pointer items-center justify-center gap-1.5 flex classic:text-xs classic:underline classic:text-skin-muted classic:transition-all retro:font-display retro:text-sm retro:text-skin-hue classic:hover:text-skin-base retro:hover:text-skin-base">
                   <span x-text={`expanded ? '${t("experience.seeLess")}' : '${t("experience.seeMore")}'`}>{t("experience.seeMore")}</span>
                   <svg class="w-4 h-4 group-hover/more:translate-y-0.5 duration-200 ease-out retro:hidden!" :class="{ 'rotate-180': expanded }" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
                   <svg class="size-4 group-hover/more:translate-y-0.5 motion-reduce:transition-none classic:hidden!" :class="{ 'rotate-180': expanded }" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><path d="M7 8H5v2h2v2h2v2h2v2h2v-2h2v-2h2v-2h2V8h-2v2h-2v2h-2v2h-2v-2H9v-2H7z" /></svg>
